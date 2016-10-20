@@ -26,3 +26,4 @@
 	var width = (window).width();
 	(".screenbg ul img").css("width",width+"px");
 });
+
