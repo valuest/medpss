@@ -4,7 +4,7 @@
 define('APP_DEBUG',ture);
 //静态资源文件访问目录设置常量
 define('CSS_URL','/medpss/Public/css/');
-define('IMG_URL','/medpss/Public/images/');
+define('IMG_URL','/medpss/Public/image/');
 define('JS_URL','/medpss/Public/js/');
 
 //引入框架接口文件
