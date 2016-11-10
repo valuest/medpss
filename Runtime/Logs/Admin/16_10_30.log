@@ -1,0 +1,9 @@
+[ 2016-10-30T03:55:49+08:00 ] ::1 /medpss/index.php/Admin/Admin/__MODEL__login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006766s ]
+ERR: 非法操作:__MODEL__login
+

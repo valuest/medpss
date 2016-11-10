@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>MedPss Management System</title>
-<link href="Public/css/login.css" type="text/css" rel="stylesheet"></link>
-<script type="text/javascript" src="Public/js/img.js"></script>
+<link href="<?php echo CSS_URL; ?>login.css" type="text/css" rel="stylesheet"></link>
+<script type="text/javascript" src="<?php echo JS_URL; ?>img.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 			<label>验证码：</label>
 			<input type="text" name="" maxlength="4" id="code" tabindex="3"/>
 			<div class="codeImg">
-				<img src="Public/image/captcha.jpeg.jpg" />
+                            <img src="<?php echo IMG_URL; ?>captcha.jpeg.jpg" />
 			</div>
 		</div>
 		<div class="remember">
@@ -37,10 +37,10 @@
 	</form>
 </div>
 
-<div class="bottom">©2014 Leting <a href="javascript:;" target="_blank">关于</a> <span>京ICP证030173号</span><img width="13" height="16" src="Public/image/copy_rignt_24.png" /></div>
+<div class="bottom">©2016 Leting <a href="javascript:;" target="_blank">关于</a> <span>京ICP证030173号</span><img width="13" height="16" src="Public/image/copy_rignt_24.png" /></div>
 <div class="screenbg">
 	<ul>
-	    <li><a href="javascript:;"><img src="Public/image/login.jpg"></a></li>
+            <li><a href="javascript:;"><img src="<?php echo IMG_URL; ?>login.jpg"></a></li>
 	</ul>
 </body>
 </html>
