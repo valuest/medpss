@@ -1,0 +1,16 @@
+[ 2016-11-13T00:56:16+08:00 ] ::1 /medpss/index.php/Admin/Med/addmed
+ERR: 1364:Field 'med_invertory' doesn't have a default value
+ [ SQL语句 ] : INSERT INTO `roc_med` (`med_approvalnumber`,`med_name`,`med_manufacturer`,`med_norms`,`med_form`,`med_type`,`med_inprice`,`med_price`,`med_supplier`,`med_date`) VALUES ('H20080815','感冒药','中山中智药厂','------','颗粒','中药','12','20','供应商A','2016-11-12 16:54:04')
+
+[ 2016-11-13T05:45:13+08:00 ] ::1 /medpss/index.php/Admin/Medchangemed
+ERR: 无法加载控制器:Medchangemed
+
+[ 2016-11-13T05:47:43+08:00 ] ::1 /medpss/index.php/Admin/Med/css/mine.css
+ERR: 非法操作:css
+
+[ 2016-11-13T05:50:54+08:00 ] ::1 /medpss/index.php/Admin/Med/admin.php?c=goods&a=showlist
+ERR: 非法操作:admin.php
+
+[ 2016-11-13T05:52:46+08:00 ] ::1 /medpss/index.php/Admin/Med/changemed
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/changemed.html"  on line 15 "&lt;a style=&quot;text-decoration: none&quot; href=&quot;{$smarty.const__CONTROLLER__}/show&quot;&gt;【返回】&lt;/a&gt;" $smarty.const__CONTROLLER__ is invalid
+

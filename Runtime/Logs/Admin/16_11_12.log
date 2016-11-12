@@ -24,3 +24,6 @@ ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Me
 ERR: 1054:Unknown column 'id' in 'order clause'
  [ SQL语句 ] : SELECT `med_id`,`med_approvalnumber`,`med_name`,`med_manufacturer`,`med_norms`,`med_form`,`med_type`,`med_inprice`,`med_price`,`med_inventory`,`med_supplier`,`med_intime` FROM `roc_med` WHERE ( med_id>10 ) ORDER BY id LIMIT 0,1  
 
+[ 2016-11-12T23:08:04+08:00 ] ::1 /medpss/index.php/Admin/Med/addmed
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/addmed.html"  on line 86 "{i=&quot;0&quot; + i}"  - Unexpected "=", expected one of: "}" , " "
+

@@ -48,7 +48,65 @@ class MedController extends Controller{
     }
     //添加药品
     function addmed(){
-        $this ->display();
+        $med = D('med');
+        $med ->group('med_type');
+        $info1 = $med->select();
+        $this ->assign('info1',$info1);
+        $med ->group('med_supplier');
+        $info2 = $med->select();
+        $this ->assign('info2',$info2);
+        //$med ->field("med_type","med_supplier");
+        
+        
+        //两个逻辑:展示表单,收集表单
+        if(!empty($_POST)){
+           //dump($_POST);//测试收集表单数据
+            $z = $med ->add($_POST);
+            if($z){
+               $this->redirect('show',array(),1,药品信息添加成功);
+            }else{
+               $this->redirect('addmed',array(),2,药品信息添加失败);
+            }
+        }else{
+           $this ->display(); 
+        }  
+    }
+    
+    //修改药品信息
+    function changemed($med_id){
+        $med = D('med');
+        $med ->group('med_type');
+        $info1 = $med->select();
+        $this ->assign('info1',$info1);
+        $med ->group('med_supplier');
+        $info2 = $med->select();
+        $this ->assign('info2',$info2);//检索用于检索药品类型和供应商,用于下拉选择
+        //echo $_GET['med_id']; 
+        if(!empty($_POST)){
+            $z = $med ->save($_POST);
+            if($z){
+               $this->redirect('managemed',array(),1,药品信息修改成功);
+            }else{
+               $this->redirect('changemed',array('med_id'=>$med_id),1,药品信息修改失败);
+            }
+        }else{
+            //根据med_id获得被修改商品信息
+        $info = $med->find($med_id);//find()只返回一条记录[一维数组形式返还]
+        $this ->assign('info',$info);
+        $this->display();
+        }          
+    }
+    
+    //删除数据
+    function deletemed($med_id){
+        $med = D('med');
+        $info = $med->find('info',$info);
+        $z = $med->delete($med_id);
+        if($z){
+               $this->redirect('managemed',array(),1,药品信息删除成功);
+            }else{
+               $this->redirect('managemed',array('med_id'=>$med_id),1,药品信息删除失败);
+            }
     }
 }
 

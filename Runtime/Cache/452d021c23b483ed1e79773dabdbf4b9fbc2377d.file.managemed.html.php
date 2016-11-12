@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-12 08:24:12
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-13 07:42:41
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html" */ ?>
 <?php /*%%SmartyHeaderCode:110762626158249c4f7dafd3-28613604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '452d021c23b483ed1e79773dabdbf4b9fbc2377d' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html',
-      1 => 1478910249,
+      1 => 1478994152,
       2 => 'file',
     ),
   ),
@@ -93,12 +93,16 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>           
                         <td width="10%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_form'];?>
 </td>
-                        <td width="5%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
+                        <td width="7%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
 </td>
-                        <td width="6%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
+                        <td width="4%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
 </td>
-                        <td><center><a href="#">修改</a>&nbsp;&nbsp;
-                            <a href="javascript:;" onclick="delete_product(1)">删除</a>
+                        <td><center><a href="<?php echo @__CONTROLLER__;?>
+/changemed/med_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+">修改</a>&nbsp;&nbsp;
+                            <a href="<?php echo @__CONTROLLER__;?>
+/deletemed/med_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+" onclick="delete_product(1)">删除</a>
                         </center></td> 
                     </tr>
                     <?php } ?>

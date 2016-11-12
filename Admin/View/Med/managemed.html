@@ -53,10 +53,10 @@
                         <td width="22%">{$v.med_manufacturer}</td>
                         <td width="22%">{$v.med_norms}</td>           
                         <td width="10%">{$v.med_form}</td>
-                        <td width="5%">{$v.med_type}</td>
-                        <td width="6%">{$v.med_price}</td>
-                        <td><center><a href="#">修改</a>&nbsp;&nbsp;
-                            <a href="javascript:;" onclick="delete_product(1)">删除</a>
+                        <td width="7%">{$v.med_type}</td>
+                        <td width="4%">{$v.med_price}</td>
+                        <td><center><a href="{$smarty.const.__CONTROLLER__}/changemed/med_id/{$v.med_id}">修改</a>&nbsp;&nbsp;
+                            <a href="{$smarty.const.__CONTROLLER__}/deletemed/med_id/{$v.med_id}" onclick="delete_product(1)">删除</a>
                         </center></td> 
                     </tr>
                     {/foreach}
