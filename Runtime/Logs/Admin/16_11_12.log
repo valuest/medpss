@@ -1,0 +1,26 @@
+[ 2016-11-12T00:26:17+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: 1146:Table 'bbsdb.med' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `med`
+
+[ 2016-11-12T04:31:26+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 66 "" unclosed {foreach} tag
+
+[ 2016-11-12T04:31:51+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 66 "" unclosed {foreach} tag
+
+[ 2016-11-12T05:16:10+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 54 "&lt;td width=&quot;15%&quot;&gt;{$V.med_intime|data_format:&quot;%Y-%M-%d %T&quot;}&lt;/td&gt;" unknown modifier "data_format"
+
+[ 2016-11-12T05:17:38+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 54 "&lt;td width=&quot;15%&quot;&gt;{$v.med_intime|data_format:&quot;%Y-%m-%d %T&quot;}&lt;/td&gt;" unknown modifier "data_format"
+
+[ 2016-11-12T05:17:38+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 54 "&lt;td width=&quot;15%&quot;&gt;{$v.med_intime|data_format:&quot;%Y-%m-%d %T&quot;}&lt;/td&gt;" unknown modifier "data_format"
+
+[ 2016-11-12T05:17:39+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html"  on line 54 "&lt;td width=&quot;15%&quot;&gt;{$v.med_intime|data_format:&quot;%Y-%m-%d %T&quot;}&lt;/td&gt;" unknown modifier "data_format"
+
+[ 2016-11-12T06:35:36+08:00 ] ::1 /medpss/index.php/Admin/Med/show
+ERR: 1054:Unknown column 'id' in 'order clause'
+ [ SQL语句 ] : SELECT `med_id`,`med_approvalnumber`,`med_name`,`med_manufacturer`,`med_norms`,`med_form`,`med_type`,`med_inprice`,`med_price`,`med_inventory`,`med_supplier`,`med_intime` FROM `roc_med` WHERE ( med_id>10 ) ORDER BY id LIMIT 0,1  
+

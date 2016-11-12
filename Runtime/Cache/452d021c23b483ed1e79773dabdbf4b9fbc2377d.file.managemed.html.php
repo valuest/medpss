@@ -1,11 +1,39 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-12 08:24:12
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html" */ ?>
+<?php /*%%SmartyHeaderCode:110762626158249c4f7dafd3-28613604%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '452d021c23b483ed1e79773dabdbf4b9fbc2377d' => 
+    array (
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html',
+      1 => 1478910249,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '110762626158249c4f7dafd3-28613604',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58249c4f823da',
+  'variables' => 
+  array (
+    'info' => 0,
+    'v' => 0,
+    'page' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58249c4f823da')) {function content_58249c4f823da($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <title> </title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}/mine.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo @ADMIN_CSS_URL;?>
+/mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -45,24 +73,39 @@
                         <td>售价</td>
                         <td><center>操作</center></td>                
                     </tr>
-                    {foreach $info as $k => $v} 
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?> 
                     <tr id="product1">
-                        <td width="5%">{$v.med_id}</td>
-<!--                        //<td width="13%">{$v.med_approvalnumber}</td>-->
-                        <td width="20%">{$v.med_name}</td>
-                        <td width="22%">{$v.med_manufacturer}</td>
-                        <td width="22%">{$v.med_norms}</td>           
-                        <td width="10%">{$v.med_form}</td>
-                        <td width="5%">{$v.med_type}</td>
-                        <td width="6%">{$v.med_price}</td>
+                        <td width="5%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+</td>
+<!--                        //<td width="13%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_approvalnumber'];?>
+</td>-->
+                        <td width="20%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
+</td>
+                        <td width="22%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
+</td>
+                        <td width="22%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
+</td>           
+                        <td width="10%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_form'];?>
+</td>
+                        <td width="5%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
+</td>
+                        <td width="6%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
+</td>
                         <td><center><a href="#">修改</a>&nbsp;&nbsp;
                             <a href="javascript:;" onclick="delete_product(1)">删除</a>
                         </center></td> 
                     </tr>
-                    {/foreach}
+                    <?php } ?>
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            <div class="pages">{$page}</div>
+                            <div class="pages"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</div>
                             <style>
                                 .pages{
                                     width:100.5%;
@@ -92,4 +135,4 @@
             </table>
         </div>
     </body>
-</html>
+</html><?php }} ?>

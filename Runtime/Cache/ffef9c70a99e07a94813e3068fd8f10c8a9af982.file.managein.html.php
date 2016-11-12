@@ -1,11 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-11 00:15:20
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html" */ ?>
+<?php /*%%SmartyHeaderCode:201997641358249d18df70b7-23325428%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ffef9c70a99e07a94813e3068fd8f10c8a9af982' => 
+    array (
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html',
+      1 => 1478794427,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '201997641358249d18df70b7-23325428',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58249d18e454c',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58249d18e454c')) {function content_58249d18e454c($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <title> </title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}/mine.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo @ADMIN_CSS_URL;?>
+/mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -13,7 +35,7 @@
         </style>
         <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：供应商管理-》供应商信息管理</span>
+                <span style="float: left;">当前位置是：库存管理-》库存信息管理</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
 <!--                    <a style="text-decoration: none;" href="#">【添加商品】</a>-->
                 </span>
@@ -66,4 +88,4 @@
             </table>
         </div>
     </body>
-</html>
+</html><?php }} ?>

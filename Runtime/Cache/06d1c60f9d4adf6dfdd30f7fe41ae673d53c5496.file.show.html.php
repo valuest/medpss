@@ -1,11 +1,40 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-12 08:59:41
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/show.html" */ ?>
+<?php /*%%SmartyHeaderCode:103968323958249ba0d36c57-83956280%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '06d1c60f9d4adf6dfdd30f7fe41ae673d53c5496' => 
+    array (
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/show.html',
+      1 => 1478912359,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '103968323958249ba0d36c57-83956280',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58249ba0d8244',
+  'variables' => 
+  array (
+    'info' => 0,
+    'v' => 0,
+    'page' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58249ba0d8244')) {function content_58249ba0d8244($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <title> </title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}/mine.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo @ADMIN_CSS_URL;?>
+/mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -44,22 +73,38 @@
                         <td>售价</td>
                         <td>创建时间</td>                  
                     </tr>
-                    {foreach $info as $k => $v} 
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?> 
                     <tr id="product1">
-                        <td width="3%">{$v.med_id}</td>
-                        <td width="13%">{$v.med_approvalnumber}</td>
-                        <td width="15%">{$v.med_name}</td>
-                        <td width="18%">{$v.med_manufacturer}</td>
-                        <td width="20%">{$v.med_norms}</td>           
-                        <td width="8%">{$v.med_form}</td>
-                        <td width="6%">{$v.med_type}</td>
-                        <td width="4%">{$v.med_price}</td>
-                        <td width="11%">{$v.med_date|date_format:"%Y-%m-%d %T"}</td>
+                        <td width="3%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+</td>
+                        <td width="13%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_approvalnumber'];?>
+</td>
+                        <td width="15%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
+</td>
+                        <td width="18%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
+</td>
+                        <td width="20%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
+</td>           
+                        <td width="8%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_form'];?>
+</td>
+                        <td width="6%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
+</td>
+                        <td width="4%"><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
+</td>
+                        <td width="11%"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['med_date'],"%Y-%m-%d %T");?>
+</td>
                     </tr>
-                    {/foreach}
+                    <?php } ?>
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            <div class="pages">{$page}</div>
+                            <div class="pages"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</div>
                             <style>
                                 .pages{
                                     width:100.5%;
@@ -102,3 +147,4 @@
         </div>
     </body>
 </html>
+<?php }} ?>

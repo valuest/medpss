@@ -1,11 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-11 00:16:02
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Supplier/managesup.html" */ ?>
+<?php /*%%SmartyHeaderCode:123654838658249d4229c320-18889775%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '649df1de7e355e767daa3b0c5d9bc3a68ea458e0' => 
+    array (
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Supplier/managesup.html',
+      1 => 1478794557,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '123654838658249d4229c320-18889775',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58249d422e821',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58249d422e821')) {function content_58249d422e821($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
         <title> </title>
 
-        <link href="{$smarty.const.ADMIN_CSS_URL}/mine.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo @ADMIN_CSS_URL;?>
+/mine.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <style>
@@ -66,4 +88,4 @@
             </table>
         </div>
     </body>
-</html>
+</html><?php }} ?>
