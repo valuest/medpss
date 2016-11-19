@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息管理</title>
+<link href="{$smarty.const.ADMIN_CSS_URL}show.css" rel="stylesheet" type="text/css" />
+<link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：系统管理-》用户管理</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                    <a style="text-decoration: none;" href="{$smarty.const.__CONTROLLER__}/adduser">【添加用户】</a>
+                </span>
+            </span>
+        </div>
+    <div class="rightinfo">
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
+        <th>用户名</th>
+        <th>注册时间</th>
+        <th>角色id</th>
+        <th colspan="2"><center>操作</center></th>
+        </tr>     
+        </thead>
+        <tbody>
+            {foreach $info as $k => $v} 
+                    <tr id="product1">
+                        <td>{$v.mg_id}</td>
+                        <td>{$v.mg_name}</td>
+                        <td>{$v.mg_time}</td>                       
+                        <td>{$v.mg_role_id}</td>                   
+                        <td>
+                            <center><a href="{$smarty.const.__CONTROLLER__}/changeuser/mg_id/{$v.mg_id}" class="tablelink">修改</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{$smarty.const.__CONTROLLER__}/deleteuser/mg_id/{$v.mg_id}" class="tablelink">删除</a>
+                            </center>    
+                        </td>
+                    </tr>
+            {/foreach}
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -9,10 +9,12 @@
     <span>药品进销存管理系统&nbsp;</span>
     <p>Ver.1.0</p>
     <div class="nav-topright">
-                    <p>当前用户：admin</p> 
-                    <a style="color: #fff" href="" target=main>修改口令</a> 
+                    <p>当前用户：{$smarty.session.user_name}</p> 
+                    <a style="color: #fff" href="../../Home/Manager/changepass" target='right'>修改口令</a> 
                     
-                    <a style="color: #fff" onclick="if (confirm('确定要退出吗？')) return true; else return false;" href="#" target=_top>退出系统</a> 
+                    <a style="color: #fff" onclick="if (confirm('确定要退出吗？')) 
+                        return true; else return false;" 
+                        href="../../Home/Manager/logout" target=_top>退出系统</a> 
     </div>
 </div>
     </body>

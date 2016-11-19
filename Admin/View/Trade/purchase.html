@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://demo.dotnetcms.org/purchase/purchase/po.aspx -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>采购单</title>
+    <link href="{$smarty.const.ADMIN_CSS_URL}bootstrap.min.css" rel="stylesheet">
+    <link href="{$smarty.const.ADMIN_CSS_URL}trade.css" rel="stylesheet">
+    </head>
+    <body class="skin-blue">
+        <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：采购管理-》药品销售</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">
+                            </span>
+                        </span>
+        </div>
+        <form name="fm" method="post" action="#" id="fm" autocomplete="off">
+            <div class="right-side" style="min-height:400px;   margin-top:5px"> 
+                <div class="content" style=" background-color:#ffffff; width:900px;">
+                    <div id="part1">
+                        <div class="text-center">                 
+                            <h3>销售订单</h3> 
+                            <div style="margin-bottom:5px;">
+                                销售订单编号：<input name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                订单日期：<input name="orderdate" type="text" id="today" style="border:0px; border-bottom:solid 1px #000">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <script type="text/javascript">
+                                    function today() {
+                                        var today = new Date();
+                                        var y = today.getFullYear();
+                                        var m = today.getMonth() + 1;
+                                        var d = today.getDate();
+//                                        var h = ("0" + today.getHours()).slice(-2);
+//                                        var f = ("0" + today.getMinutes()).slice(-2);
+//                                        var s = ("0" + today.getSeconds()).slice(-2);
+                                        return y + "-" + m + "-" + d ;
+                                    }
+
+                                    document.getElementById("today").value = today();
+                                </script>
+                        </div>
+                        <table class="table table-bordered table-condensed">
+                            <tbody>
+                                <tr>
+
+                                    <th style="width:15%">
+                                        客户
+                                        <span class="noprint">
+                                            <a href="#">选择</a>
+                                        </span>
+                                    </th>
+                                    <td style="width:35%"> 
+                                        <input name="supplyname" type="text" id="supplyname" class="#">
+                                        <input name="supplygroup" type="text" id="supplygroup" class="#" style="display:none">
+                                    </td>
+                                    <th style="width:15%">销售方
+                                    </th>
+                                    <td style="width:35%">
+                                        <input name="companyname" type="text" id="companyname" class="#">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        联系人
+                                    </th>
+                                    <td>
+                                        <input name="supplycontact" type="text" id="supplycontact" class="#">
+                                    </td>
+                                    <th>联系人</th>
+                                    <td>
+                                        <input name="companycontact" type="text" id="companycontact" class="#">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        联系电话/手机
+                                    </th>
+                                    <td>
+                                        <input name="supplytel" type="text" id="supplytel" class="# ">
+                                    </td>
+                                    <th>联系电话/手机</th>
+                                    <td>
+                                        <input name="companytel" type="text" id="companytel" class="#">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        传真
+                                    </th>
+                                    <td>
+                                        <input name="supplyfax" type="text" id="supplyfax" class="#  ">
+                                    </td>
+                                    <th>传真</th>
+                                    <td>
+                                        <input name="companyfax" type="text" id="companyfax" class="#  ">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        电子邮件
+                                    </th>
+                                    <td>
+                                        <input name="supplyemail" type="text" id="supplyemail" class="#  ">
+                                    </td>
+
+                                    <th>电子邮件</th>
+                                    <td>
+                                        <input name="companyemail" type="text" id="companyemail" class="#  ">
+                                    </td>
+                                </tr>
+                            </tbody>       
+                        </table>
+                    </div>    
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width:90px">
+                                    ID
+                                </th>
+                                <th style="width:150px">
+                                    物品名称
+                                </th>
+                                <th style="width:80px">
+                                    编号
+                                </th>
+                                <th style="width:160px">
+                                    规格
+                                </th>
+                                <th style="width:60px">
+                                    单位
+                                </th>
+                                <th style="width:65px">
+                                    数量
+                                </th>
+                                <th style="width:80px">
+                                    单价
+                                </th> 
+                                <th style="width:100px">
+                                    金额
+                                </th>
+                                <th style="width:120px">
+                                    备注
+                                </th> 
+                            </tr>
+                        </thead>
+                        <tbody data-bind="foreach: Products"></tbody>
+                        <tbody><tr>
+                                <td colspan="10">
+                                    <a href="#" >移除药品</a>
+                                    <a href="#" onclick="">选择药品</a>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <div class="text-center">
+                        <input id="btnSubmits" onclick="window.print();" class="" type="button" value="提交订单">
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </form> 
+    </div>
+</body>
+</html>

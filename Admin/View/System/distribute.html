@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>权限分配</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+       
+                </head>
+
+                <body>
+
+                    <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：系统管理-》权限管理-》权限分配[{$role_info.role_name}]</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">                              
+                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/manageauth">【返回】</a>  
+                            </span>
+                        </span>
+                    </div>
+                    <div style="font-size: 13px;margin: 10px 5px">
+                        <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+                            <table border="1" width="100%" class="table_a">
+                                <!--隐藏域-->
+                                <input type="hidden" name="role_id" value="{$role_info.role_id}"/>
+                                {foreach $auth_infoA as $k=>$v}
+                                <tr>
+                                    <td width="18%"><input type="checkbox" name="auth_id[]" value="{$v.auth_id}"
+                                        {if in_array($v.auth_id,$have_authids)}checked='checked'{/if}
+                                        />{$v.auth_name}</td>
+                                    <td>
+                                        {foreach $auth_infoB as $_k=>$_v}
+                                        {if $_v.auth_pid===$v.auth_id}
+                                        <div style="width: 200px;float: left;">
+                                            <input type="checkbox" name="auth_id[]" value="{$_v.auth_id}"
+                                        {if in_array($_v.auth_id,$have_authids)}checked='checked'{/if}
+                                        />{$_v.auth_name}</div>
+                                        {/if}
+                                        {/foreach}
+                                    </td>
+                                </tr>
+                                {/foreach}
+                                <tr>
+                                    <td colspan="2" style="text-align:right;padding-right:20px" >
+                                        <input type="submit" value="分配权限"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+<!--                            <input type="submit" value="分配权限"/>-->
+                        </form>
+                    </div>
+                </body>
+                </html>

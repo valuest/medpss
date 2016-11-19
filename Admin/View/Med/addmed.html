@@ -3,8 +3,8 @@
     <head>
         <title>add</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
-            <link href="{$smarty.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet">
-                <!--            <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}check.js"></script>-->
+            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+       
                 </head>
 
                 <body>
@@ -16,63 +16,85 @@
                             </span>
                         </span>
                     </div>
-                    <div></div>
-
                     <div style="font-size: 13px;margin: 10px 5px">
                         <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
                             <table border="1" width="100%" class="table_a">
                                 <tr>
                                     <td>国药准字号</td>
-                                    <td><input name="med_approvalnumber" type="text" placeholder="例:H20010815"/>(化学药:H+8位数字;中药:Z+8位数字)</td>
+                                    <td><input name="med_approvalnumber" type="text" placeholder="例:H20010815" maxlength="9"/>
+                                        (化学药:H+8位数字;中药:Z+8位数字)
+                                        <span style="color: red;">{$errorInfo.med_approvalnumber}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品名称</td>
-                                    <td><input type="text" name="med_name" /></td>
+                                    <td><input type="text" name="med_name" />
+                                    <span style="color: red;">{$errorInfo.med_name}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>生产厂家</td>
-                                    <td><input type="text" name="med_manufacturer" /></td>
+                                    <td><input type="text" name="med_manufacturer" />
+                                        <span style="color: red;">{$errorInfo.med_manufacturer}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品规格</td>
-                                    <td><input type="text" name="med_norms" /></td>
+                                    <td><input type="text" name="med_norms" />
+                                         <span style="color: red;">{$errorInfo.med_norms}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品剂型</td>
-                                    <td><input type="text" name="med_form" /></td>
+                                    <td><input type="text" name="med_form" />
+                                     <span style="color: red;">{$errorInfo.med_form}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品类型</td>
                                     <td>
                                         <select name="med_type">
-                                            <option value="">请选择</option>
+                                            <option value="1">-请选择-</option>
                                             {foreach from=$info1 key=_k item=_v}
                                             <option value="{$_v.med_type}">{$_v.med_type}</option>
                                             {/foreach}
                                         </select>
+                                     <span style="color: red;">
+                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                     {$errorInfo.med_type}
+                                     </span>    
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>药品采购价</td>
-                                    <td><input type="text" name="med_inprice" /></td>
+                                    <td><input type="text" name="med_inprice" />
+                                     <span style="color: red;">{$errorInfo.med_inprice}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品零售价</td>
-                                    <td><input type="text" name="med_price" /></td>
+                                    <td><input type="text" name="med_price" />
+                                     <span style="color: red;">{$errorInfo.med_price}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>药品库存</td>
-                                    <td><input type="text" name="med_inventory" value="0" readonly="true"/></td>
+                                    <td><input type="text" name="med_inventory" value="0" readonly="true"/>
+                                     <span style="color: red;">{$errorInfo.med_inventory}</span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>供应商</td>
                                     <td>
-                                        <select name="med_supplier">
-                                            <option value="">请选择</option>
+                                        <select name="sup_name">
+                                            <option value="1">-请选择-</option>
                                             {foreach from=$info2 key=_k item=_v}
-                                            <option value="{$_v.med_supplier}">{$_v.med_supplier}</option>
+                                            <option value="{$_v.sup_name}">{$_v.sup_name}</option>
                                             {/foreach}
                                         </select>
+                                        <span style="color: red;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        {$errorInfo.sup_name}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,34 +120,7 @@
                                         <input type="submit" value="添加" onclick="return checkNull()">
                                     </td>
                                 </tr>
-<!--                                <tr>
-                                    <td colspan="2" align="center">
-                                        <input type="submit" value="添加" onclick="return checkNull()">
-                                    </td>
-                                </tr>
-                                <script type="text/javascript">
-                                    function checkNull()
-                                    {
-                                        var num = 0;
-                                        var str = "";
-                                        $("input[type$='text']").each(function (n) {
-                                            if ($(this).val() == "")
-                                            {
-                                                num++;
-                                                str += "?" + $(this).attr("msg") + "不能为空！\r\n";
-                                            }
-                                        });
-                                        if (num > 0)
-                                        {
-                                            alert(str);
-                                            return false;
-                                        } else
-                                        {
-                                            return true;
-                                        }
-                                    }
-
-                                </script>-->
+                                
                             </table>
                         </form>
                     </div>

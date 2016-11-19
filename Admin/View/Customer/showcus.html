@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息管理</title>
+<link href="{$smarty.const.ADMIN_CSS_URL}show.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：客户管理-》客户信息</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                </span>
+            </span>
+        </div> 
+    <div class="rightinfo">
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
+        <th>客户名</th>
+        <th>手机号码</th>
+        <th>Email</th>
+        <th>通讯地址</th>
+        </tr>     
+        </thead>
+        <tbody>
+            {foreach $info as $k => $v} 
+                    <tr id="product1">
+                        <td>{$v.cus_id}</td>
+                        <td>{$v.cus_name}</td>
+                        <td>{$v.cus_phone}</td>      
+                        <td>{$v.cus_email}</td>
+                        <td>{$v.cus_address}</td> 
+                    </tr>
+            {/foreach}
+                    <tr>
+                        <td colspan="20" style="text-align: center;">
+                            <div class="pages">{$page}</div> 
+                        </td>
+                    </tr>
+              <tr>
+             
+        </tr> 
+        </tbody>
+    </table>
+</body>
+</html>

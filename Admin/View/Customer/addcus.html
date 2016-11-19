@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>add</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+                </head>
+                <body>
+                    <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：客户管理-》添加客户</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">
+                            </span>
+                        </span>
+                    </div>
+                    <div style="font-size: 13px;margin: 10px 5px">
+                        <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+                            <table border="1" width="100%" class="table_a">
+                                <tr>
+                                    <td>客户名称</td>
+                                    <td><input name="cus_name" type="text"/> 
+                                        <span style="color: red;">{$errorInfo.cus_name}</span>
+                                    </td>
+                                </tr>
+                                    <td>手机号码</td>
+                                    <td><input type="text" name="cus_phone" maxlength="11"/>
+                                        <span style="color: red;">{$errorInfo.cus_phone}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>银行帐户</td>
+                                    <td><input type="text" name="cus_bcard" maxlength="19"/>
+                                         <span style="color: red;">{$errorInfo.cus_bcard}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="text" name="cus_email" />
+                                     <span style="color: red;">{$errorInfo.cus_email}</span>
+                                    </td>
+                                </tr>                            
+                                <tr>
+                                    <td>通讯地址</td>
+                                    <td><input type="text" name="cus_address" />
+                                     <span style="color: red;">{$errorInfo.cus_address}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="submit" value="添加" onclick="return checkNull()">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </body>
+                </html>

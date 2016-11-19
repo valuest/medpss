@@ -3,72 +3,68 @@
     <head>
         <title>add</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
-            <link href="{$smarty.const.ADMIN_CSS_URL}mine.css" type="text/css" rel="stylesheet">
-    </head>
-
-    <body>
-
-        <div class="div_head">
-            <span>
-                <span style="float:left">当前位置是：供应商管理-》添加供应商</span>
-                <span style="float:right;margin-right: 8px;font-weight: bold">
-<!--                    <a style="text-decoration: none" href="./admin.php?c=goods&a=showlist">【返回】</a>-->
-                </span>
-            </span>
-        </div>
-        <div></div>
-
-        <div style="font-size: 13px;margin: 10px 5px">
-            <form action="./admin.php?c=goods&a=add" method="post" enctype="multipart/form-data">
-            <table border="1" width="100%" class="table_a">
-                <tr>
-                    <td>商品名称</td>
-                    <td><input type="text" name="f_goods_name" /></td>
-                </tr>
-                <tr>
-                    <td>商品分类</td>
-                    <td>
-                        <select name="f_goods_category_id">
-                            <option value="0">请选择</option>
-                            {foreach from=$s_category_info key=_k item=_v}
-                            <option value="{$_v.category_id}">{$_v.category_name}</option>
-                            {/foreach}
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>商品品牌</td>
-                    <td>
-                        <select name="f_goods_brand_id">
-                            <option value="0">请选择</option>
-                            {foreach from=$s_brand_info key=_k item=_v}
-                            <option value="{$_v.brand_id}">{$_v.brand_name}</option>
-                            {/foreach}
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>商品价格</td>
-                    <td><input type="text" name="f_goods_price" /></td>
-                </tr>
-                <tr>
-                    <td>商品图片</td>
-                    <td><input type="file" name="f_goods_image" /></td>
-                </tr>
-                <tr>
-                    <td>商品详细描述</td>
-                    <td>
-                        <textarea name="f_goods_introduce"></textarea>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td colspan="2" align="center">
-                        <input type="submit" value="添加">
-                    </td>
-                </tr>  
-            </table>
-            </form>
-        </div>
-    </body>
-</html>
+            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+                </head>
+                <body>
+                    <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：供应商管理-》添加供应商</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">
+                            </span>
+                        </span>
+                    </div>
+                    <div style="font-size: 13px;margin: 10px 5px">
+                        <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+                            <table border="1" width="100%" class="table_a">
+                                <tr>
+                                    <td>应用商名称</td>
+                                    <td><input name="sup_name" type="text"/> 
+                                        <span style="color: red;">{$errorInfo.sup_name}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>联系人</td>
+                                    <td><input name="sup_principal" type="text"/> 
+                                        <span style="color: red;">{$errorInfo.sup_princinal}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>电话/传真</td>
+                                    <td><input type="text" name="sup_fax" maxlength="8"/>
+                                    <span style="color: red;">{$errorInfo.sup_fax}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>手机号码</td>
+                                    <td><input type="text" name="sup_phone" maxlength="11"/>
+                                        <span style="color: red;">{$errorInfo.sup_phone}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>银行帐户</td>
+                                    <td><input type="text" name="sup_bcard" maxlength="19"/>
+                                         <span style="color: red;">{$errorInfo.sup_bcard}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td><input type="text" name="sup_email" />
+                                     <span style="color: red;">{$errorInfo.sup_email}</span>
+                                    </td>
+                                </tr>                            
+                                <tr>
+                                    <td>通讯地址</td>
+                                    <td><input type="text" name="sup_address" />
+                                     <span style="color: red;">{$errorInfo.sup_address}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="submit" value="添加" onclick="return checkNull()">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </body>
+                </html>

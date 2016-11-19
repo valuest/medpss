@@ -14,3 +14,16 @@ ERR: 非法操作:admin.php
 [ 2016-11-13T05:52:46+08:00 ] ::1 /medpss/index.php/Admin/Med/changemed
 ERR: Syntax Error in template "/Library/WebServer/Documents/medpss/Admin/View/Med/changemed.html"  on line 15 "&lt;a style=&quot;text-decoration: none&quot; href=&quot;{$smarty.const__CONTROLLER__}/show&quot;&gt;【返回】&lt;/a&gt;" $smarty.const__CONTROLLER__ is invalid
 
+[ 2016-11-13T19:00:44+08:00 ] ::1 /medpss/index.php/Admin/Inventory/changemin/med_id/1
+ERR: 非法操作:changemin
+
+[ 2016-11-13T21:15:58+08:00 ] ::1 /medpss/index.php/Admin/Inventory/warning
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc )' at line 1
+ [ SQL语句 ] : SELECT * FROM `roc_med` WHERE ( med_inventory<100 desc ) 
+
+[ 2016-11-13T22:11:00+08:00 ] ::1 /medpss/index.php/Admin/Med/css/style.css
+ERR: 非法操作:css
+
+[ 2016-11-13T22:11:00+08:00 ] ::1 /medpss/index.php/Admin/Med/js/jquery.js
+ERR: 非法操作:js
+

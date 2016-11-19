@@ -1,32 +1,20 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class MedController extends Controller{
-    //药品展示
-//    function show1(){
-//        //使用Medmodel
-////      $med = new \Model\MedModel();//命名空间方式实例化Model
-////      var_dump($med);
-////        $med = D('Med');
-////        var_dump($med);
-//        $med = new \Model\MedModel();//命名空间方式实例化Model
-//        $info = $med->select();//Select * From 'roc_med'
-////        dump($info);
-//        $this ->assign('info',$info);
-//        $this ->display();
+//use Think\Controller;
+use Tools\MedpssController;
+
+class MedController extends MedpssController{ 
+    //药品信息
+//    function show() {
+//        $med = D('med');      
+//        $count = $med->where($where)->count();
+//        $p = getpage($count,15);
+//        $info = $med->where($where)->order('med_id')->limit($p->firstRow, $p->listRows)->select();
+//        $this->assign('info', $info); // 赋值数据集
+//        $this->assign('page', $p->show()); // 赋值分页输出
+//        $this->display();
 //    }
-//        function show2(){
-//        //分页输出
-//        $Page = new \Think\Page($count,10);
-//        $show = $Page->show();
-//        $med = new \Model\MedModel();//命名空间方式实例化Model
-////        $info = $med->select();//Select * From 'roc_med'
-//        $info =D("med")->order($orderby)->limit($Page->firstRow.','.$Page->listRows)->select();
-//        $this ->assign('info',$info);
-//        $this ->assign('page',$show);
-//        $this ->display();
-//    }
-        function show() {
+     function showlist() {
         $med = D('med');      
 //      $where = "med_id>0";
         $count = $med->where($where)->count();
@@ -34,8 +22,10 @@ class MedController extends Controller{
         $info = $med->where($where)->order('med_id')->limit($p->firstRow, $p->listRows)->select();
         $this->assign('info', $info); // 赋值数据集
         $this->assign('page', $p->show()); // 赋值分页输出
+        //查询测试
         $this->display();
     }
+
     //药品管理
     function managemed(){
         $med = D('med');
@@ -48,28 +38,55 @@ class MedController extends Controller{
     }
     //添加药品
     function addmed(){
-        $med = D('med');
+        //验证规则
+        $rules = array(
+            //国药准字号med_approvalnumber唯一验证
+            array('med_approvalnumber', '', '该准字号已存在', 0, 'unique'),
+            array('med_approvalnumber', '9', '请填写正确的国药准字号', 0, 'length'),
+            //药品名验证
+            array('med_name', 'require', '药品名不能为空'),
+            //生产厂家med_manufacturer验证
+            array('med_manufacturer', 'require', '不能为空'),
+            //规格med_norms可为空
+            //药品剂型med_form
+            array('med_form', 'require', '药品剂型不能为空'),
+            //类型
+            array('med_type', '1', '请选择药品类型',0,'notin'),
+            //采购价格:不能为空,药价只能为2-4位数字
+            //array('med_inprice','require','药品名不能为空'),
+            array('med_inprice', '2,4', '请输入2-4位药品价格', 0, 'length'),
+            array('med_inprice', 'number', '请输入2-4位药品价格'),
+            //销售价格:不能为空,药价只能为2-4位数字
+            //array('med_price','require','药品名不能为空'),
+            array('med_price', '2,4', '请输入2-4位药品价格', 0, 'length'),
+            array('med_price', 'number', '请输入2-4位药品价格'),
+            //库存不能填写
+            //供应商不能为空
+            array('sup_name', '1', '请选择供应商',0,'notin'),
+        );//动态验证
+
+        $med = new \Model\MedModel();//调用MedModel的方法
+        //$med = D('med');
         $med ->group('med_type');
         $info1 = $med->select();
         $this ->assign('info1',$info1);
-        $med ->group('med_supplier');
-        $info2 = $med->select();
+        $sup = D('supplier');
+        $sup ->field('sup_name');
+        $info2 = $sup->select();
         $this ->assign('info2',$info2);
-        //$med ->field("med_type","med_supplier");
-        
-        
-        //两个逻辑:展示表单,收集表单
+        //带表单验证添加信息
         if(!empty($_POST)){
-           //dump($_POST);//测试收集表单数据
-            $z = $med ->add($_POST);
-            if($z){
-               $this->redirect('show',array(),1,药品信息添加成功);
+            $add = $med->validate($rules) ->create();//收集表单[$_POST]信息返回,并触发表单验证,过滤非法字段
+            if($add){
+                   if($med->add($add)){
+                      $this->redirect('showlist',array(),1,药品信息添加成功);
+                   }
             }else{
-               $this->redirect('addmed',array(),2,药品信息添加失败);
+                //dump($med->getError());
+                $this->assign('errorInfo',$med->getError());
             }
-        }else{
-           $this ->display(); 
-        }  
+        }
+        $this ->display(); 
     }
     
     //修改药品信息
@@ -108,5 +125,17 @@ class MedController extends Controller{
                $this->redirect('managemed',array('med_id'=>$med_id),1,药品信息删除失败);
             }
     }
+    
+    //数据查找
+//    function search(){
+//        $med = D('med');
+//        if(!empty($_GET)){
+//        $search = array(
+//          'med_name'=>$_GET,  
+//        );}
+//        $info=$med->where($search)->select();
+//        $this->assign('info',$info);
+//        $this->display();
+//    }
 }
 

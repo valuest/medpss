@@ -1,0 +1,20 @@
+html,body {
+  overflow-x: hidden!important;
+  font-family:'Source Sans Pro', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+  background: #f9f9f9;
+}
+.right-side {
+  background-color: #f9f9f9;
+  margin-left: 50px;
+}
+.div_head{
+    font-size: 13px;
+    margin: 10px 5px;
+    padding-left: 10px;
+    line-height: 25px;
+    height:25px;
+    background-color: #E8F2FC;
+    border-bottom: solid #1c94c4 1px
+}
