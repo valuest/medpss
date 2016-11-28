@@ -1,16 +1,54 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息管理</title>
+<link href="{$smarty.const.ADMIN_CSS_URL}show.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：药品采购-》销售订单</span>
+                <span style="float:right;margin-right: 8px;font-weight: bold">
+                    
+                </span>
+            </span>
+        </div> 
+    <div class="rightinfo">
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th>订单编号<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
+        <th>销售对象</th>
+        <th>联系人</th>
+        <th>订单时间</th>
+        <th><center>操作</center></th>
+        </tr>     
+        </thead>
+        <tbody>
+            {foreach $info as $k => $v} 
+                    <tr id="product1">
+                        <td>{$v.orderpo}</td>
+                        <td>{$v.cus_name}</td>
+                        <td>{$v.cus_principal}</td>  
+                        <td>{$v.orderdate}</td>
+                        <td><center>
+                            <a href="{$smarty.const.__CONTROLLER__}/salesorder/orderpo/{$v.orderpo}" class="tablelink">查看</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{$smarty.const.__CONTROLLER__}/deleteorder/orderpo/{$v.orderpo}" class="tablelink">删除</a>
+                            </center>
+                        </td>
+                    </tr>
+            {/foreach}
+                    <tr>
+                        <td colspan="20" style="text-align: center;">
+                            <div class="pages">{$page}</div> 
+                        </td>
+                    </tr>
+              <tr>
+             
+        </tr> 
+        </tbody>
+    </table>
+</body>
 </html>

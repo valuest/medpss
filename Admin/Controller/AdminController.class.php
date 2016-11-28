@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
-//use Think\Controller;
 use Tools\MedpssController;
+//use Think\Controller;
 
 class AdminController extends MedpssController{
     function admin(){

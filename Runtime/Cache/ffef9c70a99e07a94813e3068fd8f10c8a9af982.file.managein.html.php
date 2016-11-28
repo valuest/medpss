@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-19 09:31:51
-         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Customer/managecus.html" */ ?>
-<?php /*%%SmartyHeaderCode:111958081582fab879064e8-51938975%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-25 00:45:27
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html" */ ?>
+<?php /*%%SmartyHeaderCode:429816032583719273eec00-77983354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '00ef930314492437001c291326bd4c81e814bdb6' => 
+    'ffef9c70a99e07a94813e3068fd8f10c8a9af982' => 
     array (
-      0 => '/Library/WebServer/Documents/medpss/Admin/View/Customer/managecus.html',
-      1 => 1479513167,
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html',
+      1 => 1479331966,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '111958081582fab879064e8-51938975',
+  'nocache_hash' => '429816032583719273eec00-77983354',
   'function' => 
   array (
   ),
@@ -23,9 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_582fab879ac56',
+  'unifunc' => 'content_583719274a883',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_582fab879ac56')) {function content_582fab879ac56($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_583719274a883')) {function content_583719274a883($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,7 +40,7 @@ add&change.css" rel="stylesheet" type="text/css" />
 
         <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：客户管理-》信息管理</span>
+                <span style="float: left;">当前位置是：库存管理-》信息管理</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
                 </span>
             </span>
@@ -52,6 +53,7 @@ add&change.css" rel="stylesheet" type="text/css" />
                 </form>
             </span>
         </div>
+    
     <div class="rightinfo">
     <table class="tablelist">
     	<thead>
@@ -59,11 +61,11 @@ add&change.css" rel="stylesheet" type="text/css" />
         <th><input name="" type="checkbox" value="" checked="checked"/></th>
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
-        <th>客户名</th>
-        <th>手机号码</th>
-        <th>银行账户</th>
-        <th>Email</th>
-        <th>通讯地址</th>
+        <th>名称</th>
+        <th>生产厂商</th>
+        <th>类型</th>
+        <th>库存</th>
+        <th>创建时间</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
@@ -77,28 +79,23 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?> 
                     <tr id="product1">
                         <td><input name="" type="checkbox" value="" /></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_id'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_name'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_phone'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_bcard'];?>
-</td>           
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_email'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['cus_address'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_inventory'];?>
 </td>
-                        <td><center>
-                            <a href="<?php echo @__CONTROLLER__;?>
-/changecus/cus_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['cus_id'];?>
-" class="tablelink">修改</a>
-                            &nbsp;&nbsp;&nbsp;
-                            <a href="<?php echo @__CONTROLLER__;?>
-/deletecus/cus_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['cus_id'];?>
-" class="tablelink"> 删除</a>
-                            </center>
-                        </td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['med_date'],"%Y-%m-%d %T");?>
+</td>
+                        <td><a href="<?php echo @__CONTROLLER__;?>
+/changein/med_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+" class="tablelink">
+                                <center>维护</center></a>
+                       </td>
                     </tr>
             <?php } ?>
             <tr>

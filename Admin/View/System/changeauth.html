@@ -10,9 +10,9 @@
 
         <div class="div_head">
             <span>
-                <span style="float:left">当前位置是：供应商管理-》修改供应商信息</span>
+                <span style="float:left">当前位置是：权限管理-》修改权限信息</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/managesup">【返回】</a>
+                    <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/showauth">【返回】</a>
                 </span>
             </span>
         </div>
@@ -20,34 +20,32 @@
 
         <div style="font-size: 13px;margin: 10px 5px">
                         <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
+                           <input type="hidden" name="auth_id" value="{$info.auth_id}"/>
+                           <!-- 隐藏域,为了让修改时主键id重新返回数据-->
                             <table border="1" width="100%" class="table_a">
                                 <tr>
-                                    <td>供应商名</td>
-                                    <td><input name="sup_name" type="text" value="{$info.sup_name}"/></td>
+                                    <td>权限名称</td>
+                                    <td><input name="auth_name" type="text" value="{$info.auth_name}"/></td>
                                 </tr>
                                 <tr>
-                                    <td>联系人</td>
-                                    <td><input type="text" name="sup_principal" value="{$info.sup_principal}" /></td>
+                                    <td>父类id</td>
+                                    <td><input name="auth_pid" type="text" value="{$info.auth_pid}"/></td>
                                 </tr>
                                 <tr>
-                                    <td>电话/传真</td>
-                                    <td><input type="text" name="sup_fax" value="{$info.sup_fax}"/></td>
+                                    <td>控制器</td>
+                                    <td><input name="auth_c" type="text" value="{$info.auth_c}"/></td>
                                 </tr>
                                 <tr>
-                                    <td>手机号码</td>
-                                    <td><input type="text" name="sup_phone" value="{$info.sup_phone}"/></td>
+                                    <td>操作方法</td>
+                                    <td><input name="auth_a" type="text" value="{$info.auth_a}"/></td>
                                 </tr>
                                 <tr>
-                                    <td>银行帐户</td>
-                                    <td><input type="text" name="sup_bcard" value="{$info.sup_bcard}"/></td>
+                                    <td>全路径</td>
+                                    <td><input name="auth_path" type="text" value="{$info.auth_path}"/></td>
                                 </tr>
                                 <tr>
-                                    <td>Email</td>
-                                    <td><input type="text" name="sup_email" value="{$info.sup_email}"/></td>
-                                </tr>
-                                <tr>
-                                    <td>通讯地址</td>
-                                    <td><input type="text" name="sup_address" value="{$info.sup_address}"/></td>
+                                    <td>等级</td>
+                                    <td><input name="auth_level" type="text" value="{$info.auth_level}"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2" align="center">

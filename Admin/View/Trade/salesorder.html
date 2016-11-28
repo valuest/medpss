@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>销售单</title>
+    <link href="{$smarty.const.ADMIN_CSS_URL}bootstrap.min.css" rel="stylesheet">
+    <link href="{$smarty.const.ADMIN_CSS_URL}trade.css" rel="stylesheet">
+    <!--test-->
+<!--    <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}demo.js"></script>-->
+    
+    </head>
+    <body class="skin-blue">
+        <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：销售管理-》药品销售</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">
+                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/salemed/cus_id/{$smarty.session.cus_id}">【返回】</a> 
+                            </span>
+                        </span>
+        </div>
+        <form name="fm" method="post" action="#" id="fm" autocomplete="off">
+            <div class="right-side" style="min-height:400px;   margin-top:5px"> 
+                <div class="content" style=" background-color:#ffffff; width:900px;">
+                    <div id="part1">
+                        <div class="text-center">                 
+                            <h3>销售订单</h3> 
+                            <div style="margin-bottom:5px;">
+                                SAP Order：<input value="{$info.orderpo}" name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                订单日期：<input value="{$info.orderdate}" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <table class="table table-bordered table-condensed">
+                            <tbody>
+                                <tr>
+                                    <th style="width:15%">采购方</th>
+                                    <td style="width:35%"> 
+                        <input name="cus_name" type="text" id="cus_name" value="{$info.cus_name}" >                                 
+                                    </td>
+                                    <th style="width:15%">供货方</th>
+                                    <td style="width:35%">
+                        <input name="companyname" type="text" id="companyname" value="{$info.user_name}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>联系人</th>
+                                    <td>
+                        <input name="cus_principal" type="text" id="cus_principal" value="{$info.cus_principal}">
+                                    </td>
+                                    <th>联系人</th>
+                                    <td>
+                        <input name="companycontact" type="text" id="companycontact" value="{$info.user}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>手机</th>
+                                    <td>
+                        <input name="cus_phone" type="text" id="cus_phone" value="{$info.cus_phone}">
+                                    </td>
+                                    <th>手机</th>
+                                    <td>
+                        <input name="companytel" type="text" id="companytel" value="{$info.user_phone}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>电子邮件</th>
+                                    <td>
+                        <input name="cus_email" type="text" id="cus_email" value="{$info.cus_email}">
+                                    </td>
+                                    <th>电子邮件</th>
+                                    <td>
+                        <input name="companyemail" type="text" id="companyemail" value="{$info.user_email}">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>通讯地址</th>
+                                    <td>
+                        <input name="cus_address" type="text" id="cus_address" value="{$info.cus_address}">
+                                    </td>
+                                    <th>通讯地址</th>
+                                    <td>
+                        <input name="companyemail" type="text" id="companyemail" value="{$info.cus_phone}">
+                                    </td>
+                                </tr>
+                            </tbody>       
+                        </table>
+                    </div>    
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                
+                                <th>物品名称</th>
+                                <th>单价</th> 
+                                <th>数量</th>
+                                <th>小计</th>
+                                
+                                <th>备注</th> 
+                            </tr>{foreach $med as $k=>$v}
+                            <tr>
+                                <td>{$v}</td>
+                                
+                                <td>{$price[$k]}</td>
+                                <td>{$count[$k]}</td>
+                                <td>{$subtotal[$k]}</td>
+                                <td>{$remark[$k]}</td>
+                            </tr>{/foreach}
+                            
+                        </thead>
+                            <tr></tr>
+<!--                        <tbody data-bind="foreach: Products"></tbody>-->
+                        <tbody><tr></tr>
+                        </tbody></table>
+                    <div style="text-align:right;padding-right: 40px">合 计 : {$info.sale_total}</div>
+                    <div class="text-center">
+                        <input id="btnSubmits" onclick="window.print();" class="" type="button" value="打印订单">
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </form> 
+    </div>
+</body>
+</html>

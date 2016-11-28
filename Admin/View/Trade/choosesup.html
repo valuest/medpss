@@ -8,7 +8,7 @@
 <body>
         <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：药品采购-》采购订单</span>
+                <span style="float: left;">当前位置是：药品采购-》选择供应商</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
                     
                 </span>
@@ -19,23 +19,19 @@
     	<thead>
     	<tr>
         <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
-        <th>供应商</th>
+        <th>供应商名</th>
         <th>联系人</th>
-        <th>订单时间</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
         <tbody>
             {foreach $info as $k => $v} 
                     <tr id="product1">
-                        <td>{$v.orderpo}</td>
+                        <td>{$v.sup_id}</td>
                         <td>{$v.sup_name}</td>
                         <td>{$v.sup_principal}</td>  
-                        <td>{$v.orderdate}</td>
                         <td><center>
-                            <a href="{$smarty.const.__CONTROLLER__}/purorder/orderpo/{$v.orderpo}" class="tablelink">查看</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="{$smarty.const.__CONTROLLER__}/deletepurorder/orderpo/{$v.orderpo}" class="tablelink">删除</a>
+                            <a href="{$smarty.const.__CONTROLLER__}/purmed/sup_id/{$v.sup_id}" class="tablelink">采购</a>
                             </center>
                         </td>
                     </tr>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>信息管理</title>
+<link href="{$smarty.const.ADMIN_CSS_URL}show.css" rel="stylesheet" type="text/css" />
+<link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+        <div class="div_head">
+            <span>
+                <span style="float: left;">当前位置是：采购管理-》选择采购药品</span>
+                <span style="float: right; margin-right: 8px; font-weight: bold;">
+                </span>
+            </span>
+        </div>
+        <div class="div_search">
+            <span>
+                <form action="#" method="get">
+                    <input type="text"/>
+                    <input value="查询" type="submit" />
+                </form>
+            </span>           
+        </div>
+    <div>
+        <span>
+            <form action="#" method="get">
+                <input size="20px" type="text" value="供应商:[{$infoA.sup_name}]" readonly="ture"/>
+            </form>
+        </span>
+    </div>
+    
+    <div class="rightinfo">
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value=""/></th>
+        <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
+        <th>名称</th>
+        <th>生产厂商</th>
+        <th>规格</th>
+        <th>类型</th>
+        <th>采购价</th>
+        </tr>     
+        </thead>
+        <tbody>
+            <form action="{$smarty.const.__CONTROLLER__}/purchase" method="post">
+            {foreach $info as $k => $v} 
+<!--                <tr id="product1">
+                        <td><input name="checkbox[]" type="checkbox"/>
+                        <td>{$v.med_id}</td>
+                        <td>{$v.med_name}</td>
+                        <td>{$v.med_manufacturer}</td>
+                        <td>{$v.med_norms}</td>           
+                        <td>{$v.med_type}</td>
+                        <td>{$v.med_price}</td> </td>
+                    </tr>-->
+                    <tr id="product1">
+<!--                        <td><input name="checkbox[]" type="checkbox" 
+                                   value="{$v.med_id}&nbsp;{$v.med_name} {$v.med_manufacturer} {$v.med_norms} {$v.med_type} {$v.med_price}"/>
+                        </td>-->
+                        <td><input name="checkbox[]" type="checkbox" 
+                                   value="{$v.med_id}"/>
+                        </td>
+
+                        <td>{$v.med_id}</td>
+                        <td>{$v.med_name}</td>
+                        <td>{$v.med_manufacturer}</td>
+                        <td>{$v.med_norms}</td>           
+                        <td>{$v.med_type}</td>
+                        <td>{$v.med_inprice}</td></td>
+                    </tr>
+            {/foreach}
+            <tr>
+                <td colspan="20" style="text-align: center;">
+                    <div class="pages">{$page}</div> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="20" style="text-align: center;">
+                    <div class="text-center">
+                        <!--<a href="{$smarty.const.__CONTROLLER__}/sales">-->
+                        <input id="checked" name="checked" type="submit" value="生成订单"/>
+                        <!--</a>-->        
+                    </div>
+                </td>
+            </tr>
+            </form> 
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>

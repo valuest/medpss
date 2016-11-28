@@ -1,9 +1,9 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-//use Tools\MedpssController;
+//use Think\Controller;
+use Tools\MedpssController;
 
-class CustomerController extends Controller{
+class CustomerController extends MedpssController{
     //客户展示
     function showcus(){ 
         $cus = D('customer');      

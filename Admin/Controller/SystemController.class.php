@@ -33,7 +33,7 @@ class SystemController extends MedpssController{
                $this->redirect('changeuser',array('mg_id'=>$mg_id),1,信息修改失败);
             }
         }else{
-            //根据mg_id获得被修改商品信息
+            
         $info = $mg->find($mg_id);//find()只返回一条记录[一维数组形式返还]
         $this ->assign('info',$info);
         $this->display();
@@ -41,15 +41,7 @@ class SystemController extends MedpssController{
     }
     //添加用户
     function adduser(){
-//        $rules = array(
-//            //mg_name
-//            array('mg_name','require','NOT NULL!!!'),
-//            //mg_password
-//            array('mg_password','require','密码不能为空'),
-//            array('mg_password2','password','密码不一致',0,'confirm'),
-//            //mg_role_id
-//            array('mg_role_id', '1', '请选择角色',0,'notin'),
-//            );
+
         $role =D ('role');
         $info = $role ->select();
         $this->assign('info',$info);
@@ -123,7 +115,8 @@ class SystemController extends MedpssController{
         $role =new \Model\RoleModel();
         //展示和收集
         if(!empty($_POST)){
-            //dump($_POST);//role_id auth_id(array)
+            //dump($_POST);
+            ////role_id auth_id(array)
             //收集所选权限,并制作成数据表相应的格式保存
             $z=$role->saveRole($_POST['role_id'],$_POST['auth_id']);
             if($z){
@@ -140,7 +133,7 @@ class SystemController extends MedpssController{
             //
             //获得权限信息
             $auth_infoA = D('auth')->where("auth_level=0 and auth_id not in('107')")->select();
-            $auth_infoB = D('auth')->where("auth_level=1 and auth_id not in('130')")->select();
+            $auth_infoB = D('auth')->where("auth_level=1 and auth_id not in('131')")->select();
             
             $this->assign('role_info', $role_info);
             $this->assign('have_authids', $have_authids);
@@ -163,36 +156,7 @@ class SystemController extends MedpssController{
         $this->assign('page', $p->show());
         $this->display();
     }
-    function addauth1(){ 
-        $rules = array(
-        //权限名称
-        array('auth_name','require','权限名不能为空'),
-        //父类id
-        array('auth_pid', '1', '请选择上级',0,'notin'),
-        //控制器
-        array('auth_c','require','权限剂型不能为空'),
-        //抄作方法
-        array('auth_a','require','供应商不能为空'), 
-        );
-        $auth = new \Model\AuthModel();
-        $role = $_validate;
-        $info = $auth->order('auth_pid')->select();
-        
-        if(!empty($_POST)){
-            $add = $auth->validate($rules) ->create();
-            //dump($_POST);
-        }if($add){
-            if($auth->add($add)){
-                      $this->redirect('showauth',array(),1,权限信息添加成功);
-                   }
-        }else {
-            $this->assign('errorInfo',$auth->getError());  
-        }
-        $auth_infoA = $auth->where('auth_level=0')->select();
-        $this->assign('auth_infoA', $auth_infoA);
-        $this->display();
-    }
-    
+
     function addauth(){
         $auth = new \Model\AuthModel();
         if(!empty($_POST)){
@@ -218,7 +182,7 @@ class SystemController extends MedpssController{
         if(!empty($_POST)){
             $z = $auth ->save($_POST);
             if($z){
-               $this->redirect('manageauth',array(),1,权限信息修改成功);
+               $this->redirect('showauth',array(),1,权限信息修改成功);
             }else{
                $this->redirect('changeauth',array('auth_id'=>$auth_id),1,权限信息修改失败);
             }

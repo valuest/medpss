@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-19 09:31:43
-         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Supplier/managesup.html" */ ?>
-<?php /*%%SmartyHeaderCode:64612712582fab7f88f126-33800791%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 05:37:17
+         compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html" */ ?>
+<?php /*%%SmartyHeaderCode:1916471921583ca38dee78b4-44976588%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '649df1de7e355e767daa3b0c5d9bc3a68ea458e0' => 
+    '452d021c23b483ed1e79773dabdbf4b9fbc2377d' => 
     array (
-      0 => '/Library/WebServer/Documents/medpss/Admin/View/Supplier/managesup.html',
-      1 => 1479514666,
+      0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/managemed.html',
+      1 => 1479519142,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '64612712582fab7f88f126-33800791',
+  'nocache_hash' => '1916471921583ca38dee78b4-44976588',
   'function' => 
   array (
   ),
@@ -23,9 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_582fab7f94176',
+  'unifunc' => 'content_583ca38e075f4',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_582fab7f94176')) {function content_582fab7f94176($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_583ca38e075f4')) {function content_583ca38e075f4($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -39,7 +40,7 @@ add&change.css" rel="stylesheet" type="text/css" />
 
         <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：供应商管理-》信息管理</span>
+                <span style="float: left;">当前位置是：药品管理-》信息管理</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
                 </span>
             </span>
@@ -52,6 +53,7 @@ add&change.css" rel="stylesheet" type="text/css" />
                 </form>
             </span>
         </div>
+    
     <div class="rightinfo">
     <table class="tablelist">
     	<thead>
@@ -59,13 +61,14 @@ add&change.css" rel="stylesheet" type="text/css" />
         <th><input name="" type="checkbox" value="" checked="checked"/></th>
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
-        <th>供应商名</th>
-        <th>联系人</th>
-        <th>传真/电话</th>
-        <th>手机号码</th>
-        <th>银行账户</th>
-        <th>Email</th>
-        <th>通讯地址</th>
+        <th>国药准字号</th>
+        <th>名称</th>
+        <th>生产厂商</th>
+        <th>规格</th>
+        <th>剂型</th>
+        <th>类型</th>
+        <th>售价</th>
+        <th>创建时间</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
@@ -79,31 +82,30 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 ?> 
                     <tr id="product1">
                         <td><input name="" type="checkbox" value="" /></td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_id'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_name'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_approvalnumber'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_principal'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_fax'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_phone'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_bcard'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
 </td>           
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_email'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_form'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_address'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
 </td>
-                        <td><center>
-                            <a href="<?php echo @__CONTROLLER__;?>
-/changesup/sup_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['sup_id'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
+</td>
+                        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['v']->value['med_date'],"%Y-%m-%d %T");?>
+</td>
+                        <td><a href="<?php echo @__CONTROLLER__;?>
+/changemed/med_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 " class="tablelink">修改</a>
-                            &nbsp;&nbsp;&nbsp;
                             <a href="<?php echo @__CONTROLLER__;?>
-/deletesup/sup_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['sup_id'];?>
+/deletemed/med_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 " class="tablelink">  删除</a>
-                            </center>
                         </td>
                     </tr>
             <?php } ?>

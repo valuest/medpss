@@ -24,9 +24,10 @@ class ManagerController extends Controller {
                     session('user_name',$info['mg_name']);
                     $this ->redirect('/Admin/Admin/admin');
                 }else
-                    echo "用户名或密码错误"; 
+                    echo "<script>alert('用户名或密码错误');</script>";
+                     
             }else
-                echo "验证码错误";
+                echo "<script>alert('验证码错误');</script>";
             
         }
         $this->display();
@@ -66,26 +67,24 @@ class ManagerController extends Controller {
                 //dump($_POST['mpass']);
                 $z = $mg->save($_POST);
                 if ($z) {
-                    $this->redirect('admin', array(),3 , 密码修改成功);
-                } else {
-                    dump($_POST['old_pass']);
-                    $this->redirect('changepass', array('mg_id' => $mg_id), 3, 密码修改失败);
+                    $js =<<<eof
+                    <script type="text/javascript">
+                    window.top.location.href="../../Home/Manager/skip";
+                    </script>
+eof;
+             echo $js;
+                    //$this->redirect('skip', array(),1 , 密码修改成功需重新登录);
+                    session(null);
                 }
             }
-        }
-        
+            else{
+                       //dump($_POST['old_pass']);
+                    //dump($_POST['mg_password']);
+                    $this->redirect('changepass', array('mg_id' => $mg_id), 1, 原密码输入错误);
+                }
+          } 
         //dump($info['mg_password']);
         //dump($info);
           $this->display();
       }
-            //修改密码
-//      function changepass(){
-//          $mg = D('manager');
-//          $info = $mg->find($_SESSION['user_id']);
-//          $this->assign('info',$info);
-//          $info = $mg->checkPsw($_POST['userpassword']);
-//                if($info){
-//          $this->display();
-//          }
-//      }
 }
