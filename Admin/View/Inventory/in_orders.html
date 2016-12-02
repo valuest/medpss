@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>销售单</title>
+    <link href="{$smarty.const.ADMIN_CSS_URL}bootstrap.min.css" rel="stylesheet">
+    <link href="{$smarty.const.ADMIN_CSS_URL}trade.css" rel="stylesheet">
+    <!--test-->
+<!--    <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}demo.js"></script>-->
+    
+    </head>
+    <body class="skin-blue">
+        <div class="div_head">
+                        <span>
+                            <span style="float:left">当前位置是：入库管理-》入库清单</span>
+                            <span style="float:right;margin-right: 8px;font-weight: bold">
+                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/show_oldin">【返回】</a> 
+                            </span>
+                        </span>
+        </div>
+        <form name="fm" method="post" action="#" id="fm" autocomplete="off">
+            <div class="right-side" style="min-height:400px;   margin-top:5px"> 
+                <div class="content" style=" background-color:#ffffff; width:900px;">
+                    <div id="part1">
+                        <div class="text-center">                 
+                            <h3>入库清单</h3> 
+                            <div style="margin-bottom:5px;">
+                                SAP Order：<input value="{$info.in_order}" readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                入库日期：<input value="{$info.in_date}" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>     
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>药品ID</th>
+                                <th>药品名称</th>
+                                <th>数量</th>   
+                            </tr>{foreach $id as $k=>$v}
+                            <tr>
+                                <td>{$v}</td>
+                                <td>{$med[$k]}</td>
+                                <td>{$count[$k]}</td>
+                            </tr>{/foreach}
+                            
+                        </thead>
+                            <tr></tr>
+<!--                        <tbody data-bind="foreach: Products"></tbody>-->
+                        <tbody><tr></tr>
+                        </tbody></table>
+                    
+                    <div class="text-center">
+                        <input id="btnSubmits" onclick="window.print();" class="" type="button" value="打印清单">
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+        </form> 
+    </div>
+</body>
+</html>

@@ -14,7 +14,7 @@
                 </span>
             </span>
         </div> 
-    <div class="rightinfo">
+    <div class="rightinfo" >
     <table class="tablelist">
     	<thead>
     	<tr>
@@ -22,6 +22,7 @@
         <th>销售对象</th>
         <th>联系人</th>
         <th>订单时间</th>
+        <th>订单状态</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
@@ -32,6 +33,7 @@
                         <td>{$v.cus_name}</td>
                         <td>{$v.cus_principal}</td>  
                         <td>{$v.orderdate}</td>
+                        <td>{$infoA[$k].status}</td>
                         <td><center>
                             <a href="{$smarty.const.__CONTROLLER__}/salesorder/orderpo/{$v.orderpo}" class="tablelink">查看</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -50,5 +52,6 @@
         </tr> 
         </tbody>
     </table>
+    </div>
 </body>
 </html>

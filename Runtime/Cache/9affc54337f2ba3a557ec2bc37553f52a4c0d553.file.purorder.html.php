@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 05:11:21
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 18:18:27
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purorder.html" */ ?>
 <?php /*%%SmartyHeaderCode:818957042583c9998d93c11-82083046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9affc54337f2ba3a557ec2bc37553f52a4c0d553' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purorder.html',
-      1 => 1480367229,
+      1 => 1480414668,
       2 => 'file',
     ),
   ),
@@ -61,10 +61,10 @@ demo.js"></script>-->
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
                                 SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
-" name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+" name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderdate'];?>
-" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -74,60 +74,60 @@ demo.js"></script>-->
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%"> 
                         <input name="sup_name" type="text" id="sup_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sup_name'];?>
-" >                                 
+" readonly/>                                 
                                     </td>
                                     <th style="width:15%">供货方</th>
                                     <td style="width:35%">
                         <input name="companyname" type="text" id="companyname" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_name'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
                         <input name="sup_principal" type="text" id="sup_principal" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sup_principal'];?>
-">
+"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
                         <input name="companycontact" type="text" id="companycontact" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
                         <input name="sup_phone" type="text" id="sup_phone" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sup_phone'];?>
-">
+"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
                         <input name="companytel" type="text" id="companytel" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_phone'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
                         <input name="sup_email" type="text" id="sup_email" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sup_email'];?>
-">
+"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
                         <input name="companyemail" type="text" id="companyemail" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_email'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
                         <input name="sup_address" type="text" id="sup_address" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sup_address'];?>
-">
+"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
                         <input name="companyemail" type="text" id="companyemail" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_address'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       

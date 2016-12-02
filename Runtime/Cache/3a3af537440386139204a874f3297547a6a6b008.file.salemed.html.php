@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-23 05:17:25
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-02 18:49:01
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/salemed.html" */ ?>
 <?php /*%%SmartyHeaderCode:10490487625834b5e5f012d0-45923586%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a3af537440386139204a874f3297547a6a6b008' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/salemed.html',
-      1 => 1479821494,
+      1 => 1480675734,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5834b5e609d7a',
   'variables' => 
   array (
     'infoA' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5834b5e609d7a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5834b5e609d7a')) {function content_5834b5e609d7a($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,6 +35,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 show.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo @ADMIN_CSS_URL;?>
 add&change.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo @ADMIN_JS_URL;?>
+jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo @ADMIN_JS_URL;?>
+jquery.shiftcheckbox.js"></script>
+<script type="text/javascript">
+      function setInfoText(text) {
+        $('#demo1-link').text(text);
+        if (console && console.log) console.log(text);
+      }
+      $(function() {
+        $('#demo1 div.checkbox').shiftcheckbox({
+          checkboxSelector: ':checkbox',
+          selectAll: $('#demo1 .all'),
+          onChange: function(checked) {
+            setInfoText('Changed checkbox ' + $(this).attr('id') + ' to ' + checked + ' programmatically');
+          }
+        });     
+      });
+    </script>
 </head>
 <body>
 
@@ -62,11 +81,11 @@ add&change.css" rel="stylesheet" type="text/css" />
         </span>
     </div>
     
-    <div class="rightinfo">
+    <div class="rightinfo" id="demo1">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value=""/></th>
+        <th><div class="all"><input type="checkbox" id="all-1" value=""/></div></th>
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
         <th>名称</th>
@@ -86,34 +105,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?> 
-<!--                <tr id="product1">
-                        <td><input name="checkbox[]" type="checkbox"/>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
-</td>           
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
-</td> </td>
-                    </tr>-->
                     <tr id="product1">
-<!--                        <td><input name="checkbox[]" type="checkbox" 
+                        <td><div class="checkbox"><input name="checkbox[]" type="checkbox" 
                                    value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
-"/>
-                        </td>-->
-                        <td><input name="checkbox[]" type="checkbox" 
-                                   value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-"/>
+" id="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+"/></div>
                         </td>
 
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
@@ -149,6 +145,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             </form> 
         </tbody>
     </table>
+    </div>
 </body>
 </html>
 <?php }} ?>

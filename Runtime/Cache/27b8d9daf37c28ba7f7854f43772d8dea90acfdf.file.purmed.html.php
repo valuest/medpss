@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-23 22:30:22
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-02 18:45:37
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purmed.html" */ ?>
 <?php /*%%SmartyHeaderCode:17249440495834b46eb64c38-16035963%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27b8d9daf37c28ba7f7854f43772d8dea90acfdf' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purmed.html',
-      1 => 1479909572,
+      1 => 1480675533,
       2 => 'file',
     ),
   ),
@@ -35,6 +35,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 show.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo @ADMIN_CSS_URL;?>
 add&change.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo @ADMIN_JS_URL;?>
+jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo @ADMIN_JS_URL;?>
+jquery.shiftcheckbox.js"></script>
+<script type="text/javascript">
+      function setInfoText(text) {
+        $('#demo1-link').text(text);
+        if (console && console.log) console.log(text);
+      }
+      $(function() {
+        $('#demo1 div.checkbox').shiftcheckbox({
+          checkboxSelector: ':checkbox',
+          selectAll: $('#demo1 .all'),
+          onChange: function(checked) {
+            setInfoText('Changed checkbox ' + $(this).attr('id') + ' to ' + checked + ' programmatically');
+          }
+        });     
+      });
+    </script>
+
 </head>
 <body>
 
@@ -62,11 +82,11 @@ add&change.css" rel="stylesheet" type="text/css" />
         </span>
     </div>
     
-    <div class="rightinfo">
+    <div class="rightinfo" id="demo1">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value=""/></th>
+            <th><div class="all"><input type="checkbox" id="all-1" value=""/></div></th>
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
         <th>名称</th>
@@ -86,36 +106,14 @@ foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?> 
-<!--                <tr id="product1">
-                        <td><input name="checkbox[]" type="checkbox"/>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
-</td>           
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
-</td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
-</td> </td>
-                    </tr>-->
                     <tr id="product1">
-<!--                        <td><input name="checkbox[]" type="checkbox" 
+                        
+                        <td><div class="checkbox"><input name="checkbox[]" type="checkbox" 
                                    value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_manufacturer'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_norms'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_type'];?>
- <?php echo $_smarty_tpl->tpl_vars['v']->value['med_price'];?>
-"/>
-                        </td>-->
-                        <td><input name="checkbox[]" type="checkbox" 
-                                   value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
-"/>
+" id="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+"/></div>
                         </td>
-
+                        
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>

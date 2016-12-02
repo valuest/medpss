@@ -5,6 +5,24 @@
 <title>信息管理</title>
 <link href="{$smarty.const.ADMIN_CSS_URL}show.css" rel="stylesheet" type="text/css" />
 <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}jquery.min.js"></script>
+<script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}jquery.shiftcheckbox.js"></script>
+<script type="text/javascript">
+      function setInfoText(text) {
+        $('#demo1-link').text(text);
+        if (console && console.log) console.log(text);
+      }
+      $(function() {
+        $('#demo1 div.checkbox').shiftcheckbox({
+          checkboxSelector: ':checkbox',
+          selectAll: $('#demo1 .all'),
+          onChange: function(checked) {
+            setInfoText('Changed checkbox ' + $(this).attr('id') + ' to ' + checked + ' programmatically');
+          }
+        });     
+      });
+    </script>
+
 </head>
 <body>
 
@@ -31,11 +49,11 @@
         </span>
     </div>
     
-    <div class="rightinfo">
+    <div class="rightinfo" id="demo1">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value=""/></th>
+            <th><div class="all"><input type="checkbox" id="all-1" value=""/></div></th>
         <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
         <th>名称</th>
         <th>生产厂商</th>
@@ -47,23 +65,12 @@
         <tbody>
             <form action="{$smarty.const.__CONTROLLER__}/purchase" method="post">
             {foreach $info as $k => $v} 
-<!--                <tr id="product1">
-                        <td><input name="checkbox[]" type="checkbox"/>
-                        <td>{$v.med_id}</td>
-                        <td>{$v.med_name}</td>
-                        <td>{$v.med_manufacturer}</td>
-                        <td>{$v.med_norms}</td>           
-                        <td>{$v.med_type}</td>
-                        <td>{$v.med_price}</td> </td>
-                    </tr>-->
                     <tr id="product1">
-<!--                        <td><input name="checkbox[]" type="checkbox" 
-                                   value="{$v.med_id}&nbsp;{$v.med_name} {$v.med_manufacturer} {$v.med_norms} {$v.med_type} {$v.med_price}"/>
-                        </td>-->
-                        <td><input name="checkbox[]" type="checkbox" 
-                                   value="{$v.med_id}"/>
+                        
+                        <td><div class="checkbox"><input name="checkbox[]" type="checkbox" 
+                                   value="{$v.med_id}" id="{$v.med_id}"/></div>
                         </td>
-
+                        
                         <td>{$v.med_id}</td>
                         <td>{$v.med_name}</td>
                         <td>{$v.med_manufacturer}</td>

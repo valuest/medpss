@@ -18,6 +18,7 @@ class PurchaseModel extends Model{
                         $user_emails,
                         $sup_addresss,
                         $user_addresss,
+                        $medid,
                         $medname,
                         $medinprice,
                         $medcount,
@@ -47,6 +48,7 @@ class PurchaseModel extends Model{
 //        }
         $medpurchasetotals= array_sum($infoA);
         $medsubtotals = implode(',', $infoA);
+        $medids = implode(',', $medid);
         $mednames = implode(',', $medname);
         $medinprices = implode(',', $medinprice);
         $medcounts = implode(',', $medcount);
@@ -64,6 +66,7 @@ class PurchaseModel extends Model{
                . "user_email='$user_emails',"  
                . "sup_address='$sup_addresss',"  
                . "user_address='$user_addresss'," 
+               . "med_id='$medids',"    
                . "med_name='$mednames',"
                . "med_inprice='$medinprices',"
                . "count='$medcounts',"

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 06:19:42
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-30 19:46:09
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purchase.html" */ ?>
 <?php /*%%SmartyHeaderCode:16784350725834b471410e20-58028819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55a4da5e31f8d7bb26d448bca1303a4b8b95e8f0' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purchase.html',
-      1 => 1480371567,
+      1 => 1480506212,
       2 => 'file',
     ),
   ),
@@ -40,16 +40,6 @@ trade.css" rel="stylesheet"/>
 style.css"/>
     <script type="text/javascript" src="<?php echo @ADMIN_JS_URL;?>
 demo.js"></script>
-    
-<!--    <script> 
-     function ok(_this){ 
-     var obj=_this.parentNode
-     var k=obj.cellIndex
-     var str = obj.parentNode.cells[k-1].innerHTML
-     alert(str)
-     } 
- 
-    </script> -->
 </head>
 <body>
 <div class="catbox">
@@ -73,10 +63,10 @@ demo.js"></script>
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
                                 SAP Order：<input name="orderpo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['orderCode']->value;?>
-" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                订单日期：<input name="orderdate" type="text" value="<?php echo smarty_modifier_date_format(time(),'%Y-%m-%d');?>
-" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+                                订单日期：<input name="orderdate" type="text" value="<?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
+" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -86,56 +76,56 @@ demo.js"></script>
                                     <th style="width:15%">供应商</th>
                                     <td style="width:35%"> 
                         <input name="sup_name" type="text" id="sup_name" value="<?php echo $_smarty_tpl->tpl_vars['sup_info']->value['sup_name'];?>
-" >                                 
+"readonly/>                                 
                                     </td>
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%">
-                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统">
+                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
                         <input name="sup_principal" type="text" id="sup_principal" value="<?php echo $_smarty_tpl->tpl_vars['sup_info']->value['sup_principal'];?>
-">
+"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
                         <input name="user" type="text" id="companycontact" value="<?php echo $_SESSION['user_name'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
                         <input name="sup_phone" type="text" id="sup_phone" value="<?php echo $_smarty_tpl->tpl_vars['sup_info']->value['sup_phone'];?>
-">
+"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
-                        <input name="user_phone" type="text" id="companytel" value="18819438230">
+                        <input name="user_phone" type="text" id="companytel" value="18819438230"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
                         <input name="sup_email" type="text" id="sup_email" value="<?php echo $_smarty_tpl->tpl_vars['sup_info']->value['sup_email'];?>
-">
+"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com">
+                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
                         <input name="sup_address" type="text" id="sup_address" value="<?php echo $_smarty_tpl->tpl_vars['sup_info']->value['sup_address'];?>
-">
+"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="user_address" type="text" id="companyemail" value="华软">
+                        <input name="user_address" type="text" id="companyemail" value="华软"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       
@@ -189,7 +179,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 "/>
         <input type="hidden" name="med_inprice[]" value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_inprice'];?>
 "/>
-<!--        <input type="hidden" name="subtotal[]" value=""/>-->
+        <input type="hidden" name="med_id[]" value="<?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
+"/>
         
       </tr>
         <?php } ?> 

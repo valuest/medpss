@@ -60,14 +60,10 @@ class TradeController extends MedpssController{
             }
             $info = $med->query("select * from st_med where med_id in($id_all)");
         }
-       // $yCode = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J');
-        $orderCode = CG . strtoupper(dechex(date('m'))) . date('d') . substr(time(), -5) . substr(microtime(), 2, 5) . sprintf('%02d', rand(0, 99));
+        $orderCode = CG . date('Ymd').substr(implode(NULL,array_map('ord',str_split( substr(uniqid(), 7, 13) , 1))), 0, 8) ;
         $this->assign('orderCode',$orderCode);
-        
-        //dump($info);
         $this->assign('sup_info',$sup_info);
         $this->assign('info',$info);
-        //dump($idnew);
         $this->display();
         
     }
@@ -89,6 +85,7 @@ class TradeController extends MedpssController{
                     $_POST['user_email'],
                     $_POST['sup_address'],
                     $_POST['user_address'],
+                    $_POST['med_id'],
                     $_POST['med_name'],
                     $_POST['med_inprice'],
                     $_POST['count'],
@@ -104,10 +101,16 @@ class TradeController extends MedpssController{
     }
     //采购订单
     function showpur(){
-         $purchase = D('purchase');      
+        $purchase = D('purchase');      
         $count = $purchase->where($where)->count();
         $p = getpage($count,10);
         $info = $purchase->where($where)->order('orderpo')->limit($p->firstRow, $p->listRows)->select();
+        $infoA = $purchase->query("select case when status = 1 then '已入库'
+                                           when status = 0 then '未入库'
+                                           end as status
+                                           from st_purchase");
+        $this->assign('id',$id);
+        $this->assign('infoA', $infoA);
         $this->assign('info', $info); // 赋值数据集
         $this->assign('page', $p->show()); // 赋值分页输出
         $this->display();
@@ -188,13 +191,10 @@ class TradeController extends MedpssController{
             $info = $med->query("select * from st_med where med_id in($id_all)");
         }
         
-        //$yCode = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J');
-        $orderCode = XS . strtoupper(dechex(date('m'))) . date('d') . substr(time(), -5) . substr(microtime(), 2, 5) . sprintf('%02d', rand(0, 99));
+
+        $orderCode = XS . date('Ymd').substr(implode(NULL,array_map('ord',str_split( substr(uniqid(), 7, 13) , 1))), 0, 8) ;
         $this->assign('orderCode',$orderCode);
-//        //dump($info);
-        
-//        $orderCode = date('Ymd') . substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
-//        $this->assign('orderCode',$orderCode);
+
         $this->assign('cus_info',$cud_info);
         $this->assign('info',$info);
         //dump($idnew);
@@ -217,6 +217,7 @@ class TradeController extends MedpssController{
                     $_POST['user_email'],
                     $_POST['cus_address'],
                     $_POST['user_address'],
+                    $_POST['med_id'],
                     $_POST['med_name'],
                     $_POST['med_price'],
                     $_POST['count'],
@@ -232,47 +233,16 @@ class TradeController extends MedpssController{
     }
     
     //销售订单
-    function showsale1(){
-//        $med_inprice = $_POST['med_inprice'];
-//        $count=$_POST['count'];
-//        foreach ($med_inprice as $k => $v){
-//            $infoA[]=($v*$count[$k]);
-//            //echo sprintf($v*$count[$k]);
-//           // echo $infoA;
-//        }
-
-         $sales = new \Model\SalesModel();
-        if(!empty($_POST)){
-            $sales ->saveSales(
-                    $_POST['orderpo'],
-                    $_POST['orderdate'],
-                    $_POST['cus_name'],
-                    $_POST['user_name'],
-                    $_POST['cus_principal'],
-                    $_POST['user'],
-                    $_POST['cus_phone'],
-                    $_POST['user_phone'],
-                    $_POST['cus_email'],
-                    $_POST['user_email'],
-                    $_POST['cus_address'],
-                    $_POST['user_address'],
-                    $_POST['med_name'],
-                    $_POST['med_inprice'],
-                    $_POST['count'],
-                    $medsubtotal,
-                    $_POST['remark'],
-                    $medsaletotal);}
-        if($sales){
-            $this->redirect('showsale',array(),2,订单提交成功);
-        }
-        $this->display();
-        }
-  // }
     function showsale(){
         $sale = D('sales');      
         $count = $sale->where($where)->count();
         $p = getpage($count,10);
         $info = $sale->where($where)->order('orderpo')->limit($p->firstRow, $p->listRows)->select();
+        $infoA = $sale->query("select case when status = 1 then '已出库'
+                                           when status = 0 then '未出库'
+                                           end as status
+                                           from st_sales");
+        $this->assign('infoA',$infoA);
         $this->assign('info', $info); // 赋值数据集
         $this->assign('page', $p->show()); // 赋值分页输出
         $this->display();

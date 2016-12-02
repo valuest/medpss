@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 06:22:15
+<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 18:16:41
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/salesorder.html" */ ?>
 <?php /*%%SmartyHeaderCode:1499016768583c43c244b926-20049221%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '28f9592bb915962fb6328aa464ffa590ac39a014' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/salesorder.html',
-      1 => 1480371657,
+      1 => 1480414587,
       2 => 'file',
     ),
   ),
@@ -62,10 +62,10 @@ demo.js"></script>-->
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
                                 SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
-" name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+" readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderdate'];?>
-" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -75,60 +75,60 @@ demo.js"></script>-->
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%"> 
                         <input name="cus_name" type="text" id="cus_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_name'];?>
-" >                                 
+" readonly/>                                 
                                     </td>
                                     <th style="width:15%">供货方</th>
                                     <td style="width:35%">
                         <input name="companyname" type="text" id="companyname" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_name'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
                         <input name="cus_principal" type="text" id="cus_principal" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_principal'];?>
-">
+"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
                         <input name="companycontact" type="text" id="companycontact" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
                         <input name="cus_phone" type="text" id="cus_phone" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_phone'];?>
-">
+"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
                         <input name="companytel" type="text" id="companytel" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_phone'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
                         <input name="cus_email" type="text" id="cus_email" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_email'];?>
-">
+"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
                         <input name="companyemail" type="text" id="companyemail" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['user_email'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
                         <input name="cus_address" type="text" id="cus_address" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_address'];?>
-">
+"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
                         <input name="companyemail" type="text" id="companyemail" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['cus_phone'];?>
-">
+"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       

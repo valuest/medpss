@@ -24,9 +24,9 @@
                         <div class="text-center">                 
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input value="{$info.orderpo}" name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+                                SAP Order：<input value="{$info.orderpo}" readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                订单日期：<input value="{$info.orderdate}" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+                                订单日期：<input value="{$info.orderdate}" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -35,51 +35,51 @@
                                 <tr>
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%"> 
-                        <input name="cus_name" type="text" id="cus_name" value="{$info.cus_name}" >                                 
+                        <input name="cus_name" type="text" id="cus_name" value="{$info.cus_name}" readonly/>                                 
                                     </td>
                                     <th style="width:15%">供货方</th>
                                     <td style="width:35%">
-                        <input name="companyname" type="text" id="companyname" value="{$info.user_name}">
+                        <input name="companyname" type="text" id="companyname" value="{$info.user_name}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
-                        <input name="cus_principal" type="text" id="cus_principal" value="{$info.cus_principal}">
+                        <input name="cus_principal" type="text" id="cus_principal" value="{$info.cus_principal}"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
-                        <input name="companycontact" type="text" id="companycontact" value="{$info.user}">
+                        <input name="companycontact" type="text" id="companycontact" value="{$info.user}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
-                        <input name="cus_phone" type="text" id="cus_phone" value="{$info.cus_phone}">
+                        <input name="cus_phone" type="text" id="cus_phone" value="{$info.cus_phone}"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
-                        <input name="companytel" type="text" id="companytel" value="{$info.user_phone}">
+                        <input name="companytel" type="text" id="companytel" value="{$info.user_phone}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="cus_email" type="text" id="cus_email" value="{$info.cus_email}">
+                        <input name="cus_email" type="text" id="cus_email" value="{$info.cus_email}"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="companyemail" type="text" id="companyemail" value="{$info.user_email}">
+                        <input name="companyemail" type="text" id="companyemail" value="{$info.user_email}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="cus_address" type="text" id="cus_address" value="{$info.cus_address}">
+                        <input name="cus_address" type="text" id="cus_address" value="{$info.cus_address}"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="companyemail" type="text" id="companyemail" value="{$info.cus_phone}">
+                        <input name="companyemail" type="text" id="companyemail" value="{$info.cus_phone}"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       

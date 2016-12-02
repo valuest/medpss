@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 05:13:04
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-01 17:00:36
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/showpur.html" */ ?>
 <?php /*%%SmartyHeaderCode:13946990765834e865bfefb1-66787849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '60c5b6fe47679be1dc58b2c3acbbf96e89233a19' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/showpur.html',
-      1 => 1480367582,
+      1 => 1480582833,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'info' => 0,
     'v' => 0,
+    'k' => 0,
+    'infoA' => 0,
     'page' => 0,
   ),
   'has_nocache_code' => false,
@@ -46,11 +48,12 @@ show.css" rel="stylesheet" type="text/css" />
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
+        <th>订单编号<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
         <th>供应商</th>
         <th>联系人</th>
         <th>订单时间</th>
+        <th>订单状态</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
@@ -70,6 +73,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['sup_principal'];?>
 </td>  
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['orderdate'];?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['infoA']->value[$_smarty_tpl->tpl_vars['k']->value]['status'];?>
 </td>
                         <td><center>
                             <a href="<?php echo @__CONTROLLER__;?>

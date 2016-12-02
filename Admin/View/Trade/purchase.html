@@ -7,16 +7,6 @@
     <link href="{$smarty.const.ADMIN_CSS_URL}trade.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}style.css"/>
     <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}demo.js"></script>
-    
-<!--    <script> 
-     function ok(_this){ 
-     var obj=_this.parentNode
-     var k=obj.cellIndex
-     var str = obj.parentNode.cells[k-1].innerHTML
-     alert(str)
-     } 
- 
-    </script> -->
 </head>
 <body>
 <div class="catbox">
@@ -36,9 +26,9 @@
                         <div class="text-center">                 
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+                                SAP Order：<input name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                订单日期：<input name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+                                订单日期：<input name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -47,51 +37,51 @@
                                 <tr>
                                     <th style="width:15%">供应商</th>
                                     <td style="width:35%"> 
-                        <input name="sup_name" type="text" id="sup_name" value="{$sup_info.sup_name}" >                                 
+                        <input name="sup_name" type="text" id="sup_name" value="{$sup_info.sup_name}"readonly/>                                 
                                     </td>
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%">
-                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统">
+                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
-                        <input name="sup_principal" type="text" id="sup_principal" value="{$sup_info.sup_principal}">
+                        <input name="sup_principal" type="text" id="sup_principal" value="{$sup_info.sup_principal}"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
-                        <input name="user" type="text" id="companycontact" value="{$smarty.session.user_name}">
+                        <input name="user" type="text" id="companycontact" value="{$smarty.session.user_name}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
-                        <input name="sup_phone" type="text" id="sup_phone" value="{$sup_info.sup_phone}">
+                        <input name="sup_phone" type="text" id="sup_phone" value="{$sup_info.sup_phone}"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
-                        <input name="user_phone" type="text" id="companytel" value="18819438230">
+                        <input name="user_phone" type="text" id="companytel" value="18819438230"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="sup_email" type="text" id="sup_email" value="{$sup_info.sup_email}">
+                        <input name="sup_email" type="text" id="sup_email" value="{$sup_info.sup_email}"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com">
+                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="sup_address" type="text" id="sup_address" value="{$sup_info.sup_address}">
+                        <input name="sup_address" type="text" id="sup_address" value="{$sup_info.sup_address}"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="user_address" type="text" id="companyemail" value="华软">
+                        <input name="user_address" type="text" id="companyemail" value="华软"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       
@@ -133,7 +123,7 @@
         <td><input name="remark[]" width="500" style="border: 0px" type="text" value=""/></td>
         <input type="hidden" name="med_name[]" value="{$v.med_name}"/>
         <input type="hidden" name="med_inprice[]" value="{$v.med_inprice}"/>
-<!--        <input type="hidden" name="subtotal[]" value=""/>-->
+        <input type="hidden" name="med_id[]" value="{$v.med_id}"/>
         
       </tr>
         {/foreach} 

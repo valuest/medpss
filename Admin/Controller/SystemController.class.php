@@ -133,12 +133,14 @@ class SystemController extends MedpssController{
             //
             //获得权限信息
             $auth_infoA = D('auth')->where("auth_level=0 and auth_id not in('107')")->select();
-            $auth_infoB = D('auth')->where("auth_level=1 and auth_id not in('131')")->select();
+            $auth_infoB = D('auth')->where("auth_level!=0 and auth_id not in('131')")->select();
+           // $auth_infoC = D('auth')->where("auth_level=2 ")->select();
             
             $this->assign('role_info', $role_info);
             $this->assign('have_authids', $have_authids);
             $this->assign('auth_infoA', $auth_infoA);
             $this->assign('auth_infoB', $auth_infoB);
+           // $this->assign('auth_infoC', $auth_infoC);
             //dump($auth_infoB);
             $this->display();
         }

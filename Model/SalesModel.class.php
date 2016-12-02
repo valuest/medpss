@@ -17,6 +17,7 @@ class SalesModel extends Model{
                         $user_emails,
                         $cus_addresss,
                         $user_addresss,
+                        $medid,
                         $medname,
                         $medprice,
                         $medcount,
@@ -46,6 +47,7 @@ class SalesModel extends Model{
 //        }
         $medsaletotals= array_sum($infoA);
         $medsubtotals = implode(',', $infoA);
+        $medids = implode(',', $medid);
         $mednames = implode(',', $medname);
         $medprices = implode(',', $medprice);
         $medcounts = implode(',', $medcount);
@@ -62,7 +64,8 @@ class SalesModel extends Model{
                . "cus_email='$cus_emails',"  
                . "user_email='$user_emails',"  
                . "cus_address='$cus_addresss',"  
-               . "user_address='$user_addresss'," 
+               . "user_address='$user_addresss',"
+               . "med_id='$medids',"    
                . "med_name='$mednames',"
                . "med_price='$medprices',"
                . "count='$medcounts',"

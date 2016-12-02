@@ -16,7 +16,7 @@
                         <span>
                             <span style="float:left">当前位置是：销售管理-》药品销售</span>
                             <span style="float:right;margin-right: 8px;font-weight: bold">
-                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/purmed/sup_id/{$smarty.session.sup_id}">【返回】</a> 
+                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/salemed/cus_id/{$smarty.session.cus_id}">【返回】</a> 
                             </span>
                         </span>
         </div>
@@ -27,9 +27,9 @@
                         <div class="text-center">                 
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"> 
+                                SAP Order：<input readonly name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                订单日期：<input name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000">
+                                订单日期：<input readonly name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000"/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>
@@ -38,51 +38,51 @@
                                 <tr>
                                     <th style="width:15%">采购方</th>
                                     <td style="width:35%"> 
-                        <input name="cus_name" type="text" id="cus_name" value="{$cus_info.cus_name}" >                                 
+                        <input name="cus_name" type="text" id="cus_name" value="{$cus_info.cus_name}" readonly />                                 
                                     </td>
                                     <th style="width:15%">供货方</th>
                                     <td style="width:35%">
-                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统">
+                        <input name="user_name" type="text" id="companyname" value="药品进销存管理系统" readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>联系人</th>
                                     <td>
-                        <input name="cus_principal" type="text" id="cus_principal" value="{$cus_info.cus_principal}">
+                        <input name="cus_principal" type="text" id="cus_principal" value="{$cus_info.cus_principal}"readonly/>
                                     </td>
                                     <th>联系人</th>
                                     <td>
-                        <input name="user" type="text" id="companycontact" value="{$smarty.session.user_name}">
+                        <input name="user" type="text" id="companycontact" value="{$smarty.session.user_name}"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>手机</th>
                                     <td>
-                        <input name="cus_phone" type="text" id="cus_phone" value="{$cus_info.cus_phone}">
+                        <input name="cus_phone" type="text" id="cus_phone" value="{$cus_info.cus_phone}"readonly/>
                                     </td>
                                     <th>手机</th>
                                     <td>
-                        <input name="user_phone" type="text" id="companytel" value="18819438230">
+                        <input name="user_phone" type="text" id="companytel" value="18819438230"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="cus_email" type="text" id="cus_email" value="{$cus_info.cus_email}">
+                        <input name="cus_email" type="text" id="cus_email" value="{$cus_info.cus_email}"readonly/>
                                     </td>
                                     <th>电子邮件</th>
                                     <td>
-                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com">
+                        <input name="user_email" type="text" id="companyemail" value="542783146@qq.com"readonly/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="cus_address" type="text" id="cus_address" value="{$cus_info.cus_address}">
+                        <input name="cus_address" type="text" id="cus_address" value="{$cus_info.cus_address}"readonly/>
                                     </td>
                                     <th>通讯地址</th>
                                     <td>
-                        <input name="user_address" type="text" id="companyemail" value="华软">
+                        <input name="user_address" type="text" id="companyemail" value="华软"readonly/>
                                     </td>
                                 </tr>
                             </tbody>       
@@ -126,6 +126,7 @@
         <td><input name="remark[]" width="500" style="border: 0px" type="text" value=""/></td>
         <input type="hidden" name="med_name[]" value="{$v.med_name}"/>
         <input type="hidden" name="med_price[]" value="{$v.med_price}"/>
+        <input type="hidden" name="med_id[]" value="{$v.med_id}"/>
         
       </tr>
         {/foreach} 

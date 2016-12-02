@@ -1,3 +1,4 @@
+<!--出库管理-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,43 +9,40 @@
 <body>
         <div class="div_head">
             <span>
-                <span style="float: left;">当前位置是：药品采购-》采购订单</span>
+                <span style="float: left;">当前位置是：库存管理-》出库管理[已出库清单]</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
-                    
+                    <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/manageoutin">【返回】</a>
                 </span>
             </span>
         </div> 
     <div class="rightinfo">
+<form name="fm" method="post" action="{$smarty.const.__CONTROLLER__}/saveout" id="fm" autocomplete="off">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th>订单编号<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
-        <th>供应商</th>
-        <th>联系人</th>
-        <th>订单时间</th>
-        <th>订单状态</th>
+        <th>出库表单编号<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
+        <th>审核人员</th>
+        <th>出库时间</th>
         <th><center>操作</center></th>
         </tr>     
         </thead>
         <tbody>
             {foreach $info as $k => $v} 
                     <tr id="product1">
-                        <td>{$v.orderpo}</td>
-                        <td>{$v.sup_name}</td>
-                        <td>{$v.sup_principal}</td>  
-                        <td>{$v.orderdate}</td>
-                        <td>{$infoA[$k].status}</td>
+                        <td>{$v.out_order}</td>
+                        <td>{$v.out_user}</td>
+                        <td>{$v.out_date}</td>  
                         <td><center>
-                            <a href="{$smarty.const.__CONTROLLER__}/purorder/orderpo/{$v.orderpo}" class="tablelink">查看</a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="{$smarty.const.__CONTROLLER__}/deletepurorder/orderpo/{$v.orderpo}" class="tablelink">删除</a>
+                            <a href="{$smarty.const.__CONTROLLER__}/out_orders/out_order/{$v.out_order}" class="tablelink">查看</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{$smarty.const.__CONTROLLER__}/deleteout/out_order/{$v.out_order}" class="tablelink">删除</a>
                             </center>
                         </td>
                     </tr>
             {/foreach}
                     <tr>
                         <td colspan="20" style="text-align: center;">
-                            <div class="pages">{$page}</div> 
+<!--                            <div class="pages">{$page}</div> -->
                         </td>
                     </tr>
               <tr>
@@ -52,5 +50,8 @@
         </tr> 
         </tbody>
     </table>
+</form>
 </body>
 </html>
+
+
