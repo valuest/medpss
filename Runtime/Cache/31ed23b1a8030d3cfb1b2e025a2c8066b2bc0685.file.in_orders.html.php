@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-01 09:10:12
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 03:03:50
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/in_orders.html" */ ?>
 <?php /*%%SmartyHeaderCode:1655181026583f77a8a0cd92-61532386%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '31ed23b1a8030d3cfb1b2e025a2c8066b2bc0685' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/in_orders.html',
-      1 => 1480554483,
+      1 => 1481222829,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,10 @@ demo.js"></script>-->
                         <div class="text-center">                 
                             <h3>入库清单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['in_order'];?>
+                                CG Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['pur_order'];?>
+" readonly name="orderpo" type="text" id="orderpo" style="width: 150px;border:0px; border-bottom:solid 1px #000"/> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                RK Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['in_order'];?>
 " readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 入库日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['in_date'];?>

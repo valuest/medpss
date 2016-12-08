@@ -27,13 +27,13 @@
         </tr>     
         </thead>
         <tbody>
-            {foreach $info as $k => $v} 
+            {foreach $infoA as $k => $v} 
                     <tr id="product1">
                         <td>{$v.orderpo}</td>
                         <td>{$v.sup_name}</td>
                         <td>{$v.sup_principal}</td>  
                         <td>{$v.orderdate}</td>
-                        <td>{$infoA[$k].status}</td>
+                        <td>{$v.status}</td>
                         <td><center>
                             <a href="{$smarty.const.__CONTROLLER__}/purorder/orderpo/{$v.orderpo}" class="tablelink">查看</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

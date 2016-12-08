@@ -27,7 +27,7 @@
                         <div class="text-center">                 
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input readonly name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"/> 
+                                XS Order：<input readonly name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input readonly name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000"/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -136,16 +136,18 @@
   <div class="foot" id="foot">
     
     <!--<div class="fr closing" onclick="getTotal();">确认订单</div>-->
-    <div class="fr closing" onclick="getTotal();">
+    <!--<div class="fr closing" onclick="getTotal();">-->
         
-    <input border="0px" id="checked" type="submit" value="生成订单"/></div>
+    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"/>
+    
+<!--    </div>-->
     
     <input type="hidden" id="cartTotalPrice" />
     <div class="fr total">合计：￥<span id="priceTotal" name="total[]">0.00</span></div>
     <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
     <div class="selected-view">
       <div id="selectedViewList" class="clearfix">
-        <div><img src=""><span>取消选择</span></div>
+        <div><img src=""><span></span></div>
       </div>
       <span class="arrow">◆<span>◆</span></span> </div>
   </div>

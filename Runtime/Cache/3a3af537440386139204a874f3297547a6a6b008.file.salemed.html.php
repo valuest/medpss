@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-02 18:49:01
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 21:34:50
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/salemed.html" */ ?>
 <?php /*%%SmartyHeaderCode:10490487625834b5e5f012d0-45923586%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a3af537440386139204a874f3297547a6a6b008' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/salemed.html',
-      1 => 1480675734,
+      1 => 1481204085,
       2 => 'file',
     ),
   ),
@@ -53,6 +53,24 @@ jquery.shiftcheckbox.js"></script>
           }
         });     
       });
+     function Check()
+     {
+         var check=document.getElementsByTagName('input');
+         var bl=false;
+     for(var i=0;i<check.length;i++)
+     {
+         if(check[i].checked) 
+         {
+            bl=ture;
+            break;
+         
+         }
+     } 
+     if(!bl) 
+         alert('最少选择一种药');
+         return false;
+         //redirect('salemed');
+     }
     </script>
 </head>
 <body>
@@ -64,14 +82,14 @@ jquery.shiftcheckbox.js"></script>
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="#" method="get">
                     <input type="text"/>
                     <input value="查询" type="submit" />
                 </form>
             </span>           
-        </div>
+        </div>-->
     <div>
         <span>
             <form action="#" method="get">
@@ -97,7 +115,7 @@ px.gif" /></i></th>
         </thead>
         <tbody>
             <form action="<?php echo @__CONTROLLER__;?>
-/sales" method="post">
+/sales" method="post" name="form" onsubmit="return Check()">
             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -126,18 +144,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td></td>
                     </tr>
             <?php } ?>
-            <tr>
+<!--            <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="pages"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 </div> 
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="text-center">
                         <!--<a href="<?php echo @__CONTROLLER__;?>
 /sales">-->
-                        <input id="checked" name="checked" type="submit" value="生成订单"/>
+                        <input style="height: 30px; width:250; background:#6699ff" id="checked" name="checked" type="submit" value="生成订单"/>
                         <!--</a>-->        
                     </div>
                 </td>

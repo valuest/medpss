@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-02 18:45:37
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 21:31:20
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purmed.html" */ ?>
 <?php /*%%SmartyHeaderCode:17249440495834b46eb64c38-16035963%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '27b8d9daf37c28ba7f7854f43772d8dea90acfdf' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purmed.html',
-      1 => 1480675533,
+      1 => 1481203875,
       2 => 'file',
     ),
   ),
@@ -52,7 +52,53 @@ jquery.shiftcheckbox.js"></script>
             setInfoText('Changed checkbox ' + $(this).attr('id') + ' to ' + checked + ' programmatically');
           }
         });     
-      });
+      });//全选和shift下部分选
+      function Check()
+     {
+         var check=document.getElementsByTagName('input');
+         var bl=false;
+     for(var i=0;i<check.length;i++)
+     {
+         if(check[i].checked) 
+         {
+            bl=ture;
+            break;
+         
+         }
+     } 
+     if(!bl) 
+         alert('最少选择一种药');
+         return false;
+         //redirect('salemed');
+     }//判断复选框是否为空
+     
+     checkedIds="";//翻页保存选中的id(翻页记录前一页的check的值)
+          function changeIds(){
+             var oneches=document.getElementsByName("checkbox");
+             for(var i=0;i<oneches.length;i++){
+                 if(oneches[i].checked==true){
+                     //避免重复累计id （不含该id时进行累加）
+                     if(checkedIds.indexOf(oneches[i].value)==-1){
+                         checkedIds=checkedIds+oneches[i].value+",";
+                     }
+                 }
+                 if(oneches[i].checked==false){
+                     //取消复选框时 含有该id时将id从全局变量中去除
+                     if(checkedIds.indexOf(oneches[i].value)!=-1){
+                         checkedIds=checkedIds.replace((oneches[i].value+","),"");
+                     }
+                 }
+             }
+          }
+    function getChecked(){
+                var oneches=document.getElementsByName("checkbox");
+             for(var i=0;i<oneches.length;i++){
+                     //全局变量中含有id，则该复选框选中
+                     if(checkedIds.indexOf(oneches[i].value)!=-1){
+                         oneches[i].checked=true;
+                     }
+                 }
+          }
     </script>
 
 </head>
@@ -65,14 +111,14 @@ jquery.shiftcheckbox.js"></script>
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="#" method="get">
                     <input type="text"/>
                     <input value="查询" type="submit" />
                 </form>
             </span>           
-        </div>
+        </div>-->
     <div>
         <span>
             <form action="#" method="get">
@@ -98,7 +144,7 @@ px.gif" /></i></th>
         </thead>
         <tbody>
             <form action="<?php echo @__CONTROLLER__;?>
-/purchase" method="post">
+/purchase" method="post" onsubmit="return Check()">
             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -128,18 +174,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td></td>
                     </tr>
             <?php } ?>
-            <tr>
+<!--            <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="pages"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
 </div> 
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="text-center">
                         <!--<a href="<?php echo @__CONTROLLER__;?>
 /sales">-->
-                        <input id="checked" name="checked" type="submit" value="生成订单"/>
+                        <input style="height: 30px; width:250; background:#6699ff" id="checked" name="checked" type="submit" value="生成订单"/>
                         <!--</a>-->        
                     </div>
                 </td>

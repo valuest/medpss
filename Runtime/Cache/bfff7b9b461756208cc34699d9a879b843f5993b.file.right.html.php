@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-23 05:18:02
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 18:28:28
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Admin/right.html" */ ?>
 <?php /*%%SmartyHeaderCode:12318123425834b60ab87466-74885519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bfff7b9b461756208cc34699d9a879b843f5993b' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Admin/right.html',
-      1 => 1479417585,
+      1 => 1480806202,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_5834b60ac3ad6',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5834b60ac3ad6')) {function content_5834b60ac3ad6($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -77,20 +77,6 @@ title_bg2.jpg>您的相关信息</td></tr>
                 <td align=right>身份：</td>
                 <td style="color: #880000"><?php echo $_SESSION['role_name'];?>
 </td></tr>
-<!--            <tr>
-                <td align=right>注册时间：</td>
-                <td style="color: #880000"></td></tr>
-            <tr>
-                <td align=right>登陆次数：</td>
-                <td style="color: #880000">58</td></tr>
-            <tr>
-                <td align=right>上线时间：</td>
-                <td style="color: #880000"><?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
-</td></tr>  -->
-            <tr>
-                
-                <td align=right>ip地址：</td>
-                <td style="color: #880000">222.240.172.117</td></tr>
             <tr>
                 <td align=right>身份过期：</td>
                 <td style="color: #880000">30 分钟</td>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-01 17:00:36
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:31:10
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/showpur.html" */ ?>
 <?php /*%%SmartyHeaderCode:13946990765834e865bfefb1-66787849%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '60c5b6fe47679be1dc58b2c3acbbf96e89233a19' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/showpur.html',
-      1 => 1480582833,
+      1 => 1481229068,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5834e865c56bd',
   'variables' => 
   array (
-    'info' => 0,
-    'v' => 0,
-    'k' => 0,
     'infoA' => 0,
+    'v' => 0,
     'page' => 0,
   ),
   'has_nocache_code' => false,
@@ -60,7 +58,7 @@ px.gif" /></i></th>
         <tbody>
             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['infoA']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
@@ -74,7 +72,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>  
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['orderdate'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['infoA']->value[$_smarty_tpl->tpl_vars['k']->value]['status'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['status'];?>
 </td>
                         <td><center>
                             <a href="<?php echo @__CONTROLLER__;?>

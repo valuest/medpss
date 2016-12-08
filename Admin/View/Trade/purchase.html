@@ -26,7 +26,7 @@
                         <div class="text-center">                 
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
+                                CG Order：<input name="orderpo" type="text" value="{$orderCode}" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input name="orderdate" type="text" value="{$smarty.now|date_format:'%Y-%m-%d %H:%M:%S'}" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -132,8 +132,7 @@
   <div class="foot" id="foot">
     
     <!--<div class="fr closing" onclick="getTotal();">确认订单</div>-->
-    <div class="fr closing" onclick="getTotal();">
-    <input id="checked" type="submit" value="生成订单"/></div>
+    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"/>
     <input type="hidden" id="cartTotalPrice" />
     <div class="fr total">合计：￥<span id="priceTotal" name="total[]">0.00</span></div>
     <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>

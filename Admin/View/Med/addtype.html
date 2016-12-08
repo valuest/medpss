@@ -1,17 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="zh-cn">
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
     <head>
         <title>add</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
-            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />    
+            <link href="{$smarty.const.ADMIN_CSS_URL}add&change.css" rel="stylesheet" type="text/css" />
+       
                 </head>
+
                 <body>
 
                     <div class="div_head">
                         <span>
-                            <span style="float:left">当前位置是：权限管理-》添加角色</span>
+                            <span style="float:left">当前位置是：药品管理-》添加药品类型</span>
                             <span style="float:right;margin-right: 8px;font-weight: bold">
-                                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/manageauth">【返回】</a>
+                                
                             </span>
                         </span>
                     </div>
@@ -19,15 +26,14 @@
                         <form action="{$smarty.const.__SELF__}" method="post" enctype="multipart/form-data">
                             <table border="1" width="100%" class="table_a">
                                 <tr>
-                                    <td>角色名称</td>
-                                    <td>
-                                        <input type="text" name="role_name" placeholder="请输入角色名" data-validate="required:角色名不能为空" />
-                                   <span style="color: red;">{$errorInfo.role_name}</span>
+                                    <td>药品类型名称</td>
+                                    <td><input type="text" name="type_name" />
+                                    <span style="color: red;">{$errorInfo.type_name}</span>
                                     </td>
                                 </tr>
                                  <tr>
-                                    <td colspan="2" style="text-align:right;padding-right:20px">
-                                        <input type="submit" value="添加" onclick="return checkNull()">
+                                    <td colspan="2" align="center">
+                                        <input type="submit" value="添加" onclick="checkNull()"/>
                                     </td>
                                 </tr>
                                 
@@ -35,4 +41,4 @@
                         </form>
                     </div>
                 </body>
-                </html>
+</html>

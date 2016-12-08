@@ -21,6 +21,24 @@
           }
         });     
       });
+     function Check()
+     {
+         var check=document.getElementsByTagName('input');
+         var bl=false;
+     for(var i=0;i<check.length;i++)
+     {
+         if(check[i].checked) 
+         {
+            bl=ture;
+            break;
+         
+         }
+     } 
+     if(!bl) 
+         alert('最少选择一种药');
+         return false;
+         //redirect('salemed');
+     }
     </script>
 </head>
 <body>
@@ -32,14 +50,14 @@
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="#" method="get">
                     <input type="text"/>
                     <input value="查询" type="submit" />
                 </form>
             </span>           
-        </div>
+        </div>-->
     <div>
         <span>
             <form action="#" method="get">
@@ -62,7 +80,7 @@
         </tr>     
         </thead>
         <tbody>
-            <form action="{$smarty.const.__CONTROLLER__}/sales" method="post">
+            <form action="{$smarty.const.__CONTROLLER__}/sales" method="post" name="form" onsubmit="return Check()">
             {foreach $info as $k => $v} 
                     <tr id="product1">
                         <td><div class="checkbox"><input name="checkbox[]" type="checkbox" 
@@ -77,16 +95,16 @@
                         <td>{$v.med_price}</td></td>
                     </tr>
             {/foreach}
-            <tr>
+<!--            <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="pages">{$page}</div> 
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td colspan="20" style="text-align: center;">
                     <div class="text-center">
                         <!--<a href="{$smarty.const.__CONTROLLER__}/sales">-->
-                        <input id="checked" name="checked" type="submit" value="生成订单"/>
+                        <input style="height: 30px; width:250; background:#6699ff" id="checked" name="checked" type="submit" value="生成订单"/>
                         <!--</a>-->        
                     </div>
                 </td>

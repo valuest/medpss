@@ -77,7 +77,7 @@ class SystemController extends MedpssController{
     //添加角色
     function addrole(){
         $rules = array(
-            array('role_name','require','NOT NULL!!!'),
+            array('role_name','require','X'),
             );
         $role = D('role');
         if(!empty($_POST)){
@@ -206,5 +206,27 @@ class SystemController extends MedpssController{
             }
    
     }
+    //数据库备份
+    function backup(){
+
+        
+       
+        
+        $this->display();
+    }
+    //备份测试
+    function backuptest(){
+        $db = D('test');
+        $db->query("select * from st_test where test_id!='' into outfile '/Library/WebServer/Documents/medpss/Backup/test'
+                    fields terminated by '|' enclosed by ':' lines terminated by '\r\n'");
+    }
+    //还原测试
+    function reductiontest(){
+        $db = D('test');
+        $db-> execute("load data infile '/Library/WebServer/Documents/medpss/Backup/test' into table st_test
+                    fields terminated by '|' enclosed by ':' lines terminated by '\r\n' ");
+    }
+    
+ 
 }
 

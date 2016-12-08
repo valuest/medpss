@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 18:18:27
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 02:43:59
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purorder.html" */ ?>
 <?php /*%%SmartyHeaderCode:818957042583c9998d93c11-82083046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9affc54337f2ba3a557ec2bc37553f52a4c0d553' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purorder.html',
-      1 => 1480414668,
+      1 => 1481222577,
       2 => 'file',
     ),
   ),
@@ -60,7 +60,7 @@ demo.js"></script>-->
                         <div class="text-center">                 
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
+                                CG Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
 " name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderdate'];?>

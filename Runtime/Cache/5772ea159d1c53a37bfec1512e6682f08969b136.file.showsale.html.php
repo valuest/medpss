@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-02 04:55:07
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:23:19
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/showsale.html" */ ?>
 <?php /*%%SmartyHeaderCode:94489858583c367f10c386-37362890%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5772ea159d1c53a37bfec1512e6682f08969b136' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/showsale.html',
-      1 => 1480625697,
+      1 => 1481228596,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_583c367f16549',
   'variables' => 
   array (
-    'info' => 0,
-    'v' => 0,
-    'k' => 0,
     'infoA' => 0,
+    'v' => 0,
     'page' => 0,
   ),
   'has_nocache_code' => false,
@@ -44,7 +42,7 @@ show.css" rel="stylesheet" type="text/css" />
                 </span>
             </span>
         </div> 
-    <div class="rightinfo">
+    <div class="rightinfo" >
     <table class="tablelist">
     	<thead>
     	<tr>
@@ -60,7 +58,7 @@ px.gif" /></i></th>
         <tbody>
             <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->tpl_vars['infoA']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
 $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
@@ -74,7 +72,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>  
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['orderdate'];?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['infoA']->value[$_smarty_tpl->tpl_vars['k']->value]['status'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['v']->value['status'];?>
 </td>
                         <td><center>
                             <a href="<?php echo @__CONTROLLER__;?>
@@ -99,6 +97,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         </tr> 
         </tbody>
     </table>
+    </div>
 </body>
 </html>
 <?php }} ?>

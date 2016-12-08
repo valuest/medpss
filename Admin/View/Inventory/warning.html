@@ -19,26 +19,26 @@
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <!--<th><input name="" type="checkbox" value="" checked="checked"/></th>-->
         <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
         <th>名称</th>
         <th>生产厂商</th>
         <th>库存</th>
-        <th><center>操作</center></th>
+        <!--<th><center>操作</center></th>-->
         </tr>     
         </thead>
         <tbody>
             {foreach $info as $k => $v} 
                     <tr id="product1">
-                        <td><input name="" type="checkbox" value="" /></td>
+<!--                        <td><input name="" type="checkbox" value="" /></td>-->
                         <td>{$v.med_id}</td>
                         <td>{$v.med_name}</td>
                         <td>{$v.med_manufacturer}</td>
                         <td>{$v.med_inventory}</td>
-                        <td><a href="#" class="tablelink">
+<!--                        <td><a href="#" class="tablelink">
                                 <center>补仓</center></a>
-                            <!--补仓直接跳转到采购-->
-                       </td>
+                            补仓直接跳转到采购
+                       </td>-->
                     </tr>
             {/foreach}
             <tr>

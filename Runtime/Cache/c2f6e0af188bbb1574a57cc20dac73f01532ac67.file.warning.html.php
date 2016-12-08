@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-24 17:41:43
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:15:13
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/warning.html" */ ?>
 <?php /*%%SmartyHeaderCode:2421612905836b5d78d8400-38530651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c2f6e0af188bbb1574a57cc20dac73f01532ac67' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/warning.html',
-      1 => 1479519179,
+      1 => 1481228107,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5836b5d79638f',
   'variables' => 
   array (
     'info' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5836b5d79638f',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5836b5d79638f')) {function content_5836b5d79638f($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -48,13 +48,13 @@ add&change.css" rel="stylesheet" type="text/css" />
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <!--<th><input name="" type="checkbox" value="" checked="checked"/></th>-->
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
         <th>名称</th>
         <th>生产厂商</th>
         <th>库存</th>
-        <th><center>操作</center></th>
+        <!--<th><center>操作</center></th>-->
         </tr>     
         </thead>
         <tbody>
@@ -66,7 +66,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?> 
                     <tr id="product1">
-                        <td><input name="" type="checkbox" value="" /></td>
+<!--                        <td><input name="" type="checkbox" value="" /></td>-->
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>
@@ -75,10 +75,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_inventory'];?>
 </td>
-                        <td><a href="#" class="tablelink">
+<!--                        <td><a href="#" class="tablelink">
                                 <center>补仓</center></a>
-                            <!--补仓直接跳转到采购-->
-                       </td>
+                            补仓直接跳转到采购
+                       </td>-->
                     </tr>
             <?php } ?>
             <tr>

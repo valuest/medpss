@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-30 19:41:22
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:15:52
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/sales.html" */ ?>
 <?php /*%%SmartyHeaderCode:19093241875834adc13a3072-07144356%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'edff5b24435425c65bd4d08b9bed713176048b5d' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/sales.html',
-      1 => 1480506077,
+      1 => 1481222728,
       2 => 'file',
     ),
   ),
@@ -63,7 +63,7 @@ demo.js"></script>
                         <div class="text-center">                 
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input readonly name="orderpo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['orderCode']->value;?>
+                                XS Order：<input readonly name="orderpo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['orderCode']->value;?>
 " id="orderpo" style="border:0px; border-bottom:solid 1px #000"/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input readonly name="orderdate" type="text" value="<?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
@@ -193,16 +193,18 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
   <div class="foot" id="foot">
     
     <!--<div class="fr closing" onclick="getTotal();">确认订单</div>-->
-    <div class="fr closing" onclick="getTotal();">
+    <!--<div class="fr closing" onclick="getTotal();">-->
         
-    <input border="0px" id="checked" type="submit" value="生成订单"/></div>
+    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"/>
+    
+<!--    </div>-->
     
     <input type="hidden" id="cartTotalPrice" />
     <div class="fr total">合计：￥<span id="priceTotal" name="total[]">0.00</span></div>
     <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
     <div class="selected-view">
       <div id="selectedViewList" class="clearfix">
-        <div><img src=""><span>取消选择</span></div>
+        <div><img src=""><span></span></div>
       </div>
       <span class="arrow">◆<span>◆</span></span> </div>
   </div>

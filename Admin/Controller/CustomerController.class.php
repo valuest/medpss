@@ -31,6 +31,7 @@ class CustomerController extends MedpssController{
             //应用商名称
             //array('cus_name','', '客户已存在', 0, 'unique'),
             array('cus_name', 'require', '名称不能为空'),
+            array('cus_principal', 'require', '联系人不能为空'),
             //手机号码
             array('cus_phone', '11', '手机号码长度过短', 0, 'length'),
             array('cus_phone', 'number', '请填写正确的手机号码'),
@@ -66,9 +67,9 @@ class CustomerController extends MedpssController{
         if(!empty($_POST)){
             $z = $cus ->save($_POST);
             if($z){
-               $this->redirect('managecus',array(),1,药品信息修改成功);
+               $this->redirect('managecus',array(),1,客户信息修改成功);
             }else{
-               $this->redirect('changecus',array('cus_id'=>$cus_id),1,药品信息修改失败);
+               $this->redirect('changecus',array('cus_id'=>$cus_id),1,客户信息修改失败);
             }
         }else{
             //根据cus_id获得被修改商品信息

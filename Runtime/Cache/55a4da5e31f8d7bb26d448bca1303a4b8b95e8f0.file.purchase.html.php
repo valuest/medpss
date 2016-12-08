@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-30 19:46:09
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 03:03:22
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/purchase.html" */ ?>
 <?php /*%%SmartyHeaderCode:16784350725834b471410e20-58028819%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55a4da5e31f8d7bb26d448bca1303a4b8b95e8f0' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/purchase.html',
-      1 => 1480506212,
+      1 => 1481222626,
       2 => 'file',
     ),
   ),
@@ -62,7 +62,7 @@ demo.js"></script>
                         <div class="text-center">                 
                             <h3>采购订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input name="orderpo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['orderCode']->value;?>
+                                CG Order：<input name="orderpo" type="text" value="<?php echo $_smarty_tpl->tpl_vars['orderCode']->value;?>
 " id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input name="orderdate" type="text" value="<?php echo smarty_modifier_date_format(time(),'%Y-%m-%d %H:%M:%S');?>
@@ -189,8 +189,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
   <div class="foot" id="foot">
     
     <!--<div class="fr closing" onclick="getTotal();">确认订单</div>-->
-    <div class="fr closing" onclick="getTotal();">
-    <input id="checked" type="submit" value="生成订单"/></div>
+    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"/>
     <input type="hidden" id="cartTotalPrice" />
     <div class="fr total">合计：￥<span id="priceTotal" name="total[]">0.00</span></div>
     <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>

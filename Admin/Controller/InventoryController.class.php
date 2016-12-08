@@ -77,6 +77,7 @@ class InventoryController extends MedpssController{
     function saveout($orderpo){
         $sales = D('sales');
         $info = $sales->find($orderpo);//find()只返回一条记录[一维数组形式返还]
+        //session($orderpo);
         $sale_orderpo = $info['orderpo'];
         $med_ids = $info['med_id'];
         $med_name = $info['med_name'];
@@ -101,15 +102,17 @@ class InventoryController extends MedpssController{
                 . "out_medid='$med_ids'," 
                 . "out_medname='$med_name',"
                 . "out_medcount='$med_count',"
+                . "sale_order='$orderpo',"   
                 . "out_user='$admin_name'");
         if($med_result){
             $this->redirect('show_oldout',array(),1,药品出库成功);
         }
     }
     //出库清单
-    function out_orders(){
+    function out_orders($out_order){
         $out = D('outorder');
         $info = $out->find($out_order);//find()只返回一条记录[一维数组形式返还]
+        //dump($info);
         $id = explode(",",$info['out_medid']);
         $med = explode(",",$info['out_medname']);
         $count = explode(",",$info['out_medcount']);
@@ -194,13 +197,14 @@ class InventoryController extends MedpssController{
                 . "in_medid='$med_ids'," 
                 . "in_medname='$med_name',"
                 . "in_medcount='$med_count',"
+                . "pur_order='$orderpo',"    
                 . "in_user='$admin_name'");
         if($med_result){
             $this->redirect('show_oldin',array(),1,药品入库成功);
         }
     }
     //入库清单详情
-    function in_orders(){
+    function in_orders($in_order){
         $in = D('inorder');
         $info = $in->find($in_order);//find()只返回一条记录[一维数组形式返还]
         $id = explode(",",$info['in_medid']);

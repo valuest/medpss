@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-23 23:14:10
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 23:27:31
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/System/addrole.html" */ ?>
 <?php /*%%SmartyHeaderCode:19874339715835b2421a3e64-34220927%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e39fd65452969c01532273734a3b7d7babee73a7' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/System/addrole.html',
-      1 => 1479564693,
+      1 => 1481210843,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5835b24221a21',
   'variables' => 
   array (
     'errorInfo' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5835b24221a21',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5835b24221a21')) {function content_5835b24221a21($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="zh-cn">
@@ -50,8 +50,8 @@ add&change.css" rel="stylesheet" type="text/css" />
                                     <td>角色名称</td>
                                     <td>
                                         <input type="text" name="role_name" placeholder="请输入角色名" data-validate="required:角色名不能为空" />
-<!--                                    <span style="color: red;"><?php echo $_smarty_tpl->tpl_vars['errorInfo']->value['role_name'];?>
-</span>-->
+                                   <span style="color: red;"><?php echo $_smarty_tpl->tpl_vars['errorInfo']->value['role_name'];?>
+</span>
                                     </td>
                                 </tr>
                                  <tr>

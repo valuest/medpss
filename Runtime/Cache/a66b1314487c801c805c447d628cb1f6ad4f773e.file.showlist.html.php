@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-24 17:41:41
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 21:48:34
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/showlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:16123636275836b5d54ab0f6-28405863%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a66b1314487c801c805c447d628cb1f6ad4f773e' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/showlist.html',
-      1 => 1479167743,
+      1 => 1481204912,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5836b5d555168',
   'variables' => 
   array (
     'info' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5836b5d555168',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5836b5d555168')) {function content_5836b5d555168($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -43,7 +43,7 @@ show.css" rel="stylesheet" type="text/css" />
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="<?php echo @__SELF__;?>
 " method="get">
@@ -51,7 +51,7 @@ show.css" rel="stylesheet" type="text/css" />
                     <input value="查询" type="submit" />
                 </form>
             </span>
-        </div>
+        </div>-->
     
     <div class="rightinfo">
     <table class="tablelist">

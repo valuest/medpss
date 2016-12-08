@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 18:16:41
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:16:31
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Trade/salesorder.html" */ ?>
 <?php /*%%SmartyHeaderCode:1499016768583c43c244b926-20049221%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '28f9592bb915962fb6328aa464ffa590ac39a014' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Trade/salesorder.html',
-      1 => 1480414587,
+      1 => 1481222745,
       2 => 'file',
     ),
   ),
@@ -49,8 +49,7 @@ demo.js"></script>-->
                             <span style="float:left">当前位置是：销售管理-》药品销售</span>
                             <span style="float:right;margin-right: 8px;font-weight: bold">
                                 <a style="text-decoration: none" href="<?php echo @__CONTROLLER__;?>
-/salemed/cus_id/<?php echo $_SESSION['cus_id'];?>
-">【返回】</a> 
+/showsale">【返回】</a> 
                             </span>
                         </span>
         </div>
@@ -61,7 +60,7 @@ demo.js"></script>-->
                         <div class="text-center">                 
                             <h3>销售订单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
+                                XS Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderpo'];?>
 " readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 订单日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['orderdate'];?>

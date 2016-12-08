@@ -5,7 +5,7 @@ return array(
     'DEFAULT_CONTROLLER'    =>  'Manager', // 默认控制器名称
     'DEFAULT_ACTION'        =>  'login', // 默认操作名称
     //页面底部显示跟踪信息
-    'SHOW_PAGE_TRACE' =>true,
+   // 'SHOW_PAGE_TRACE' =>true,
     //默认分组设置
     'DEFAULT_MOUDLE' =>'Admin', //默认模块
     'MOUDLE_ALLOW_LIST'=>array('Home','Admin'),//定义可访问的分组

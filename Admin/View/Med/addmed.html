@@ -50,7 +50,7 @@
                                      <span style="color: red;">{$errorInfo.med_form}</span>
                                     </td>
                                 </tr>
-                                <tr>
+<!--                                <tr>
                                     <td>药品类型</td>
                                     <td>
                                         <select name="med_type">
@@ -63,6 +63,20 @@
                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                      {$errorInfo.med_type}
                                      </span>    
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <td>药品类型</td>
+                                    <td>
+                                        <select name="type_name">
+                                            <option value="1">-请选择-</option>
+                                            {foreach from=$info1 key=_k item=_v}
+                                            <option value="{$_v.type_name}">{$_v.type_name}</option>
+                                            {/foreach}
+                                        </select>
+                                        <span style="color: red;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        {$errorInfo.type_name}</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -93,7 +107,7 @@
                                             {/foreach}
                                         </select>
                                         <span style="color: red;">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         {$errorInfo.sup_name}</span>
                                     </td>
                                 </tr>

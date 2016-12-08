@@ -34,11 +34,12 @@ class TradeController extends MedpssController{
         $supname = $infoA['sup_name'];
         //$info = $med->query("select * from st_med where med_supplier like '$supname'");
             
-        $count = $med->where("med_supplier like '$supname'")->count();
-        $p = getpage($count,10);
-        $info = $med->where("med_supplier like '$supname'")->order('med_id')->limit($p->firstRow, $p->listRows)->select();
+        //$count = $med->where("med_supplier like '$supname'")->count();
+        //$p = getpage($count,10);
+        //$info = $med->where("med_supplier like '$supname'")->order('med_id')->limit($p->firstRow, $p->listRows)->select();
+        $info = $med->where("med_supplier like '$supname'")->select();
         $this->assign('info', $info); // 赋值数据集
-        $this->assign('page', $p->show()); // 赋值分页输出
+        //$this->assign('page', $p->show()); // 赋值分页输出
         
         
         //dump($info);
@@ -102,17 +103,18 @@ class TradeController extends MedpssController{
     //采购订单
     function showpur(){
         $purchase = D('purchase');      
-        $count = $purchase->where($where)->count();
-        $p = getpage($count,10);
-        $info = $purchase->where($where)->order('orderpo')->limit($p->firstRow, $p->listRows)->select();
-        $infoA = $purchase->query("select case when status = 1 then '已入库'
-                                           when status = 0 then '未入库'
+        //$count = $purchase->where($where)->count();
+        //$p = getpage($count,10);
+       // $info = $purchase->where($where)->order('orderdate')->limit($p->firstRow, $p->listRows)->select();
+        $infoA = $purchase->query("select *,case when status = 1 then '已入库'
+                                           when status = 0 then '待入库...'
                                            end as status
-                                           from st_purchase");
-        $this->assign('id',$id);
+                                           from st_purchase
+                                           order by orderdate");
+        
         $this->assign('infoA', $infoA);
         $this->assign('info', $info); // 赋值数据集
-        $this->assign('page', $p->show()); // 赋值分页输出
+        //$this->assign('page', $p->show()); // 赋值分页输出
         $this->display();
     }
     //采购订单详情
@@ -166,13 +168,17 @@ class TradeController extends MedpssController{
         $infoA = $cus->find($cus_id);
         session('cus_id',$cus_id);
         $med = D('med');
-        $count = $med->where($where)->count();
-        $p = getpage($count,15);
-        $info = $med->where($where)->order('med_id')->limit($p->firstRow, $p->listRows)->select();
-        $this->assign('info', $info); // 赋值数据集
-        $this->assign('page', $p->show()); // 赋值分页输出
-        $this->assign('infoA',$infoA);
+        //$count = $med->where($where)->count();
+        //$p = getpage($count,15);
+        //$info = $med->where($where)->order('med_id')->limit($p->firstRow, $p->listRows)->select();
         
+        $info = $med->select();
+        $this->assign('info', $info); // 赋值数据集
+        //$this->assign('page', $p->show()); // 赋值分页输出
+        $this->assign('infoA',$infoA);
+//        if(isset($_POST['checked'])){
+//            $_SESSION['checkbox'];
+//        }
         $this->display();
         
     }
@@ -182,7 +188,7 @@ class TradeController extends MedpssController{
         $med = D('med');
         $cus = D('customer');
         $cus_id = session('cus_id');
-        $cud_info = $cus->find($cus_id);
+        $cus_info = $cus->find($cus_id);
         if(isset($_POST['checked'])){
 
             foreach($_REQUEST['checkbox'] as $checkbox){
@@ -195,7 +201,7 @@ class TradeController extends MedpssController{
         $orderCode = XS . date('Ymd').substr(implode(NULL,array_map('ord',str_split( substr(uniqid(), 7, 13) , 1))), 0, 8) ;
         $this->assign('orderCode',$orderCode);
 
-        $this->assign('cus_info',$cud_info);
+        $this->assign('cus_info',$cus_info);
         $this->assign('info',$info);
         //dump($idnew);
         $this->display();
@@ -235,16 +241,17 @@ class TradeController extends MedpssController{
     //销售订单
     function showsale(){
         $sale = D('sales');      
-        $count = $sale->where($where)->count();
-        $p = getpage($count,10);
-        $info = $sale->where($where)->order('orderpo')->limit($p->firstRow, $p->listRows)->select();
-        $infoA = $sale->query("select case when status = 1 then '已出库'
-                                           when status = 0 then '未出库'
-                                           end as status
-                                           from st_sales");
+       // $count = $sale->where($where)->count();
+        //$p = getpage($count,10);
+        //$info = $sale->where($where)->order('orderdate')->limit($p->firstRow, $p->listRows)->select();
+        $infoA = $sale->query("select *,case when status = 1 then '已出库'
+                                           when status = 0 then '待出库...' 
+                                           end as status 
+                                           from st_sales
+                                           order by orderdate");
         $this->assign('infoA',$infoA);
-        $this->assign('info', $info); // 赋值数据集
-        $this->assign('page', $p->show()); // 赋值分页输出
+      //  $this->assign('info', $info); // 赋值数据集
+     //   $this->assign('page', $p->show()); // 赋值分页输出
         $this->display();
     }
     //订单详情

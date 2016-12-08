@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-12-01 09:08:18
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-09 04:31:43
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/out_orders.html" */ ?>
 <?php /*%%SmartyHeaderCode:278030232583f631f01f5b0-81967837%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '239e699313336196c13202bbef806d1cc255d14c' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/out_orders.html',
-      1 => 1480554493,
+      1 => 1481222756,
       2 => 'file',
     ),
   ),
@@ -58,11 +58,14 @@ demo.js"></script>-->
                         <div class="text-center">                 
                             <h3>出库清单</h3> 
                             <div style="margin-bottom:5px;">
-                                SAP Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['out_order'];?>
-" readonly name="orderpo" type="text" id="orderpo" style="border:0px; border-bottom:solid 1px #000"readonly/> 
+                                XS Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sale_order'];?>
+" readonly name="orderpo" type="text" id="orderpo" style="width: 150px;border:0px; border-bottom:solid 1px #000"/> 
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                CK Order：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['out_order'];?>
+" readonly name="orderpo" type="text" id="orderpo" style="width: 150px;border:0px; border-bottom:solid 1px #000"/> 
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 出库日期：<input value="<?php echo $_smarty_tpl->tpl_vars['info']->value['out_date'];?>
-" name="orderdate" type="text" id="orderdate" style="border:0px; border-bottom:solid 1px #000"readonly/>
+" name="orderdate" type="text" id="orderdate" style="width: 150px;border:0px; border-bottom:solid 1px #000"/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                         </div>     

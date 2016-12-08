@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-25 00:45:27
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 23:21:16
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html" */ ?>
 <?php /*%%SmartyHeaderCode:429816032583719273eec00-77983354%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffef9c70a99e07a94813e3068fd8f10c8a9af982' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Inventory/managein.html',
-      1 => 1479331966,
+      1 => 1481210470,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_583719274a883',
   'variables' => 
   array (
     'info' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'page' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_583719274a883',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_583719274a883')) {function content_583719274a883($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Library/WebServer/Documents/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php';
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -45,20 +45,20 @@ add&change.css" rel="stylesheet" type="text/css" />
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="#" method="get">
                     <input type="text"/>
                     <input value="查询" type="submit" />
                 </form>
             </span>
-        </div>
+        </div>-->
     
     <div class="rightinfo">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <!--<th><input name="" type="checkbox" value="" checked="checked"/></th>-->
         <th>ID<i class="sort"><img src="<?php echo @ADMIN_IMG_URL;?>
 px.gif" /></i></th>
         <th>名称</th>
@@ -78,7 +78,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?> 
                     <tr id="product1">
-                        <td><input name="" type="checkbox" value="" /></td>
+                        <!--<td><input name="" type="checkbox" value="" /></td>-->
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_id'];?>
 </td>
                         <td><?php echo $_smarty_tpl->tpl_vars['v']->value['med_name'];?>

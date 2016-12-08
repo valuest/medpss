@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-11-29 05:37:18
+<?php /* Smarty version Smarty-3.1.6, created on 2016-12-08 22:07:01
          compiled from "/Library/WebServer/Documents/medpss/Admin/View/Med/addmed.html" */ ?>
 <?php /*%%SmartyHeaderCode:1772058828583ca38eb368e5-20447947%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '95ca0364333751836b6b83a0946aad6e124e2c1c' => 
     array (
       0 => '/Library/WebServer/Documents/medpss/Admin/View/Med/addmed.html',
-      1 => 1479515875,
+      1 => 1481206020,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_583ca38ec1b8c',
   'variables' => 
   array (
     'errorInfo' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'info2' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_583ca38ec1b8c',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_583ca38ec1b8c')) {function content_583ca38ec1b8c($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -85,7 +85,7 @@ add&change.css" rel="stylesheet" type="text/css" />
 </span>
                                     </td>
                                 </tr>
-                                <tr>
+<!--                                <tr>
                                     <td>药品类型</td>
                                     <td>
                                         <select name="med_type">
@@ -107,6 +107,29 @@ $_smarty_tpl->tpl_vars['_v']->_loop = true;
                                      <?php echo $_smarty_tpl->tpl_vars['errorInfo']->value['med_type'];?>
 
                                      </span>    
+                                    </td>
+                                </tr>-->
+                                <tr>
+                                    <td>药品类型</td>
+                                    <td>
+                                        <select name="type_name">
+                                            <option value="1">-请选择-</option>
+                                            <?php  $_smarty_tpl->tpl_vars['_v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['_v']->_loop = false;
+ $_smarty_tpl->tpl_vars['_k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info1']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['_v']->key => $_smarty_tpl->tpl_vars['_v']->value){
+$_smarty_tpl->tpl_vars['_v']->_loop = true;
+ $_smarty_tpl->tpl_vars['_k']->value = $_smarty_tpl->tpl_vars['_v']->key;
+?>
+                                            <option value="<?php echo $_smarty_tpl->tpl_vars['_v']->value['type_name'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_v']->value['type_name'];?>
+</option>
+                                            <?php } ?>
+                                        </select>
+                                        <span style="color: red;">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <?php echo $_smarty_tpl->tpl_vars['errorInfo']->value['type_name'];?>
+</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,7 +171,7 @@ $_smarty_tpl->tpl_vars['_v']->_loop = true;
                                             <?php } ?>
                                         </select>
                                         <span style="color: red;">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <?php echo $_smarty_tpl->tpl_vars['errorInfo']->value['sup_name'];?>
 </span>
                                     </td>

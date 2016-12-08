@@ -15,20 +15,20 @@
                 </span>
             </span>
         </div>
-        <div class="div_search">
+<!--        <div class="div_search">
             <span>
                 <form action="#" method="get">
                     <input type="text"/>
                     <input value="查询" type="submit" />
                 </form>
             </span>
-        </div>
+        </div>-->
     
     <div class="rightinfo">
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <!--<th><input name="" type="checkbox" value="" checked="checked"/></th>-->
         <th>ID<i class="sort"><img src="{$smarty.const.ADMIN_IMG_URL}px.gif" /></i></th>
         <th>名称</th>
         <th>生产厂商</th>
@@ -41,7 +41,7 @@
         <tbody>
             {foreach $info as $k => $v} 
                     <tr id="product1">
-                        <td><input name="" type="checkbox" value="" /></td>
+                        <!--<td><input name="" type="checkbox" value="" /></td>-->
                         <td>{$v.med_id}</td>
                         <td>{$v.med_name}</td>
                         <td>{$v.med_manufacturer}</td>

@@ -51,7 +51,7 @@ class MedController extends MedpssController{
             //药品剂型med_form
             array('med_form', 'require', '药品剂型不能为空'),
             //类型
-            array('med_type', '1', '请选择药品类型',0,'notin'),
+            array('type_name', '1', '请选择药品类型',0,'notin'),
             //采购价格:不能为空,药价只能为2-4位数字
             //array('med_inprice','require','药品名不能为空'),
             array('med_inprice', '2,4', '请输入2-4位药品价格', 0, 'length'),
@@ -67,9 +67,13 @@ class MedController extends MedpssController{
 
         $med = new \Model\MedModel();//调用MedModel的方法
         //$med = D('med');
-        $med ->group('med_type');
-        $info1 = $med->select();
-        $this ->assign('info1',$info1);
+//        $med ->group('med_type');
+//        $info1 = $med->select();
+//        $this ->assign('info1',$info1);
+        $type= D('medtype');
+        $type->field('type_name');
+        $info1 = $type->select();
+        $this->assign('info1',$info1);
         $sup = D('supplier');
         $sup ->field('sup_name');
         $info2 = $sup->select();
@@ -126,16 +130,44 @@ class MedController extends MedpssController{
             }
     }
     
-    //数据查找
-//    function search(){
-//        $med = D('med');
-//        if(!empty($_GET)){
-//        $search = array(
-//          'med_name'=>$_GET,  
-//        );}
-//        $info=$med->where($search)->select();
-//        $this->assign('info',$info);
-//        $this->display();
-//    }
+    //药品类型管理
+    function managetype(){
+        $type = D('medtype');
+        $info = $type->select();
+        $this->assign('info',$info);
+        $this->display();
+    }
+    function addtype(){
+        //验证规则
+        $rules = array(
+            //药品类型唯一,不能为空
+            array('type_name', '', 'X', 0, 'unique'),
+            array('type_name', 'require', 'N'),
+        );//动态验证
+        $type = D('medtype');
+        if(!empty($_POST)){
+            $add = $type->validate($rules) ->create();//收集表单[$_POST]信息返回,并触发表单验证,过滤非法字段
+            if($add){
+                   if($type->add($add)){
+                      $this->redirect('managetype',array(),1,药品类型信息添加成功);
+                   }
+            }else{
+                //dump($type->getError());
+                $this->assign('errorInfo',$type->getError());
+            }
+        }
+        $this ->display(); 
+    }
+     function deletetype($type_id){
+        $type = D('medtype');
+        $info = $type->find('info',$info);
+        $z = $type->delete($type_id);
+        if($z){
+               $this->redirect('managetype',array(),1,药品类型信息删除成功);
+            }else{
+               $this->redirect('managetype',array('med_id'=>$type_id),1,药品类型信息删除失败);
+            }
+    }
+
 }
 
