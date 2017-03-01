@@ -58,7 +58,7 @@ class InventoryController extends MedpssController{
         $sale = D('sales');      
         //$info = $sale->where("status=0") ->select();
         $info = $sale->query("select *,case when status = 1 then '已出库'
-                                           when status = 0 then '未出库'
+                                           when status = 0 then '待出库...'
                                            end as status
                                            from st_sales where status='0'");
         
@@ -69,7 +69,7 @@ class InventoryController extends MedpssController{
     //出库管理(显示更多订单:已处理的订单)
     function show_oldout(){
         $out = D('outorder');      
-        $info = $out ->select();
+        $info = $out->order('out_date') ->select();
         $this->assign('info', $info); // 赋值数据集
         $this->display();
     }
@@ -150,7 +150,7 @@ class InventoryController extends MedpssController{
         //$info = $pur->where("status=0") ->select();
         $id = $info['orderpo'];
         $info = $pur->query("select *,case when status = 1 then '已入库'
-                                           when status = 0 then '未入库'
+                                           when status = 0 then '待入库...'
                                            end as status
                                            from st_purchase where status='0'");
         //dump($info);
@@ -183,7 +183,7 @@ class InventoryController extends MedpssController{
         foreach($id as $k=>$v){
             $med_id = $v;
             $med_in= $count[$k];
-            $med_result = $med->where("med_id=$med_id")->setDec('med_inventory',$med_in);//出库更新库存
+            $med_result = $med->where("med_id=$med_id")->setInc('med_inventory',$med_in);//入库更新库存
         }
 
         //修改订单状态

@@ -6,8 +6,7 @@
     <link href="{$smarty.const.ADMIN_CSS_URL}bootstrap.min.css" rel="stylesheet"/>
     <link href="{$smarty.const.ADMIN_CSS_URL}trade.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{$smarty.const.ADMIN_CSS_URL}style.css"/>
-    <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}demo.js"></script>   
-            
+    <script type="text/javascript" src="{$smarty.const.ADMIN_JS_URL}demo.js"></script>  
 </head>
 <body>
 <div class="catbox">
@@ -98,11 +97,11 @@
         <th><center>单价</center></th>
         <th><center>数量</center></th>
         <th><center>小计</center></th>
+        <th><center>库存</center></th>
         <th><center>备注</center></th>
       </tr>
     </thead>
-    <tbody>
-        
+    <tbody> 
         {foreach $info as $k => $v}
       <tr>
           <td class="checkbox"><label>
@@ -119,11 +118,14 @@
             <span class="reduce"></span>
           <input name="count[]" class="count-input" type="text" value="1"/>
           <span class="add">+</span></td>
+          
+          <!-- <input type="text" name="" value="{$v.med_inventory}"/> -->
         <td class="subtotal" name="med_toprice[]">{$v.med_price}</td>
-        
+        <td>{$v.med_inventory}</td>
 <!--        <input type="hidden" id="subtotal" name="subtotal[]"/>-->
         
         <td><input name="remark[]" width="500" style="border: 0px" type="text" value=""/></td>
+        <input type="hidden" name="med_inventory[]" value="{$v.med_inventory}"/>
         <input type="hidden" name="med_name[]" value="{$v.med_name}"/>
         <input type="hidden" name="med_price[]" value="{$v.med_price}"/>
         <input type="hidden" name="med_id[]" value="{$v.med_id}"/>
@@ -138,7 +140,7 @@
     <!--<div class="fr closing" onclick="getTotal();">确认订单</div>-->
     <!--<div class="fr closing" onclick="getTotal();">-->
         
-    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"/>
+    <input style="height: 48px" class="fr closing" border="0px" id="checked" type="submit" value="生成订单"  />
     
 <!--    </div>-->
     
@@ -153,5 +155,16 @@
   </div>
 </div>
         </form>
+         <script type="text/javascript">
+    // function abc(){
+    //     // alert("sdoiqjw");
+    //     if(document.getElementById("fm")count>med_inventory){
+    //         alert("库存不足，提交失败");
+    //     }else{
+    //         var fm = document.getElementById("fm");
+    //         fm.submit;
+    //     }
+    //}
+ </script>
 </body>
 </html>

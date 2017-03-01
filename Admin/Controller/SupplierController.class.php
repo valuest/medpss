@@ -37,7 +37,7 @@ class SupplierController extends MedpssController{
             array('sup_name','', '供应商名称已存在', 0, 'unique'),
             array('sup_name', 'require', '名称不能为空'),
             //联系人
-            array('sup_princinal', 'require', '名称不能为空'),
+            array('sup_principal', 'require', '供应商不能为空'),
             //电话/传真
             array('sup_fax', '8', '请填写正确的电话号码', 0, 'length'),
             array('sup_fax', 'number', '请填写正确的电话号码'),

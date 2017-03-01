@@ -4,7 +4,7 @@
 header('Content-Type:text/html; charset=utf-8');
 //引用thinkphp框架制作药品进销存管理系统
 //开发模式
-define('APP_DEBUG',ture);
+define('APP_DEBUG',true);
 //静态资源文件访问目录设置常量
 //Home分组
 define('CSS_URL','/medpss/Public/css/');

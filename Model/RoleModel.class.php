@@ -18,7 +18,7 @@ class RoleModel extends Model{
             $s.=",".$v['auth_c']."-".$v['auth_a'].",";        
         }
         //$s = rtrim($s,',');
-        echo $s;
+        //echo $s;
         $sql ="update st_role set role_auth_ids='$authids',role_auth_ac='$s' where role_id='$roleid'";
         //$this 代表调用该方法的对象
         return $this ->execute($sql);

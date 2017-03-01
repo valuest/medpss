@@ -40,33 +40,33 @@
          //redirect('salemed');
      }//判断复选框是否为空
      
-     checkedIds="";//翻页保存选中的id(翻页记录前一页的check的值)
-          function changeIds(){
-             var oneches=document.getElementsByName("checkbox");
-             for(var i=0;i<oneches.length;i++){
-                 if(oneches[i].checked==true){
-                     //避免重复累计id （不含该id时进行累加）
-                     if(checkedIds.indexOf(oneches[i].value)==-1){
-                         checkedIds=checkedIds+oneches[i].value+",";
-                     }
-                 }
-                 if(oneches[i].checked==false){
-                     //取消复选框时 含有该id时将id从全局变量中去除
-                     if(checkedIds.indexOf(oneches[i].value)!=-1){
-                         checkedIds=checkedIds.replace((oneches[i].value+","),"");
-                     }
-                 }
-             }
-          }
-    function getChecked(){
-                var oneches=document.getElementsByName("checkbox");
-             for(var i=0;i<oneches.length;i++){
-                     //全局变量中含有id，则该复选框选中
-                     if(checkedIds.indexOf(oneches[i].value)!=-1){
-                         oneches[i].checked=true;
-                     }
-                 }
-          }
+    //  checkedIds="";//翻页保存选中的id(翻页记录前一页的check的值)
+    //       function changeIds(){
+    //          var oneches=document.getElementsByName("checkbox");
+    //          for(var i=0;i<oneches.length;i++){
+    //              if(oneches[i].checked==true){
+    //                  //避免重复累计id （不含该id时进行累加）
+    //                  if(checkedIds.indexOf(oneches[i].value)==-1){
+    //                      checkedIds=checkedIds+oneches[i].value+",";
+    //                  }
+    //              }
+    //              if(oneches[i].checked==false){
+    //                  //取消复选框时 含有该id时将id从全局变量中去除
+    //                  if(checkedIds.indexOf(oneches[i].value)!=-1){
+    //                      checkedIds=checkedIds.replace((oneches[i].value+","),"");
+    //                  }
+    //              }
+    //          }
+    //       }
+    // function getChecked(){
+    //             var oneches=document.getElementsByName("checkbox");
+    //          for(var i=0;i<oneches.length;i++){
+    //                  //全局变量中含有id，则该复选框选中
+    //                  if(checkedIds.indexOf(oneches[i].value)!=-1){
+    //                      oneches[i].checked=true;
+    //                  }
+    //              }
+    //       }
     </script>
 
 </head>
@@ -76,6 +76,7 @@
             <span>
                 <span style="float: left;">当前位置是：采购管理-》选择采购药品</span>
                 <span style="float: right; margin-right: 8px; font-weight: bold;">
+                <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/choosesup">【返回】</a>
                 </span>
             </span>
         </div>

@@ -68,7 +68,7 @@
                                 <tr>
                                     <td>药品类型</td>
                                     <td>
-                                        <select name="type_name">
+                                        <select name="med_type">
                                             <option value="1">-请选择-</option>
                                             {foreach from=$info1 key=_k item=_v}
                                             <option value="{$_v.type_name}">{$_v.type_name}</option>
@@ -100,7 +100,7 @@
                                 <tr>
                                     <td>供应商</td>
                                     <td>
-                                        <select name="sup_name">
+                                        <select name="med_supplier">
                                             <option value="1">-请选择-</option>
                                             {foreach from=$info2 key=_k item=_v}
                                             <option value="{$_v.sup_name}">{$_v.sup_name}</option>

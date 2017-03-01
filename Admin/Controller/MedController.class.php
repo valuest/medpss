@@ -90,6 +90,7 @@ class MedController extends MedpssController{
                 $this->assign('errorInfo',$med->getError());
             }
         }
+        //dump($_POST);
         $this ->display(); 
     }
     

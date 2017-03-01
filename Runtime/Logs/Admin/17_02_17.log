@@ -1,0 +1,1063 @@
+[ 2017-02-17T14:45:44+08:00 ] ::1 /medpss/index.php/Admin/Admin/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000994s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001588s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0114s ]
+ERR: 1146:Table 'medpss.st_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_role`
+ERR: 1146:Table 'medpss.st_role' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_role`
+
+[ 2017-02-17T14:46:47+08:00 ] ::1 /medpss/index.php/Admin/Admin/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000691s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0101s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\3760a8ba8657e73166e0309ed0a14458eb7ea360.file.admin.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\3760a8ba8657e73166e0309ed0a14458eb7ea360.file.admin.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.173836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.173907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001668s ]
+
+[ 2017-02-17T14:46:47+08:00 ] ::1 /medpss/index.php/Admin/Admin/head.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002687s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\0d125e3700e7712fa6d70a0e4990bf7ec41392a8.file.head.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\0d125e3700e7712fa6d70a0e4990bf7ec41392a8.file.head.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036214s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2017-02-17T14:46:47+08:00 ] ::1 /medpss/index.php/Admin/Admin/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002084s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\79093100af3d53838b03c7f02a9c37c0727b9e16.file.right.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\79093100af3d53838b03c7f02a9c37c0727b9e16.file.right.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: role_name D:\php\xampp\htdocs\medpss\Runtime\Cache\79093100af3d53838b03c7f02a9c37c0727b9e16.file.right.html.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001088s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001336s ]
+
+[ 2017-02-17T14:46:47+08:00 ] ::1 /medpss/index.php/Admin/Admin/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\php\xampp\htdocs\medpss\Admin\Controller\AdminController.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `st_auth` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `st_auth` WHERE ( auth_level=0 )  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `st_auth` WHERE ( auth_level=1 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\cdf13caa0fbb69b6405153162e6bb206f7d557e0.file.left.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\cdf13caa0fbb69b6405153162e6bb206f7d557e0.file.left.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001255s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001324s ]
+
+[ 2017-02-17T14:46:50+08:00 ] ::1 /medpss/index.php/Admin/Supplier/showsup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 15 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_supplier` LIMIT 1   [ RunTime:0.0305s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 17 行.
+SQL: SELECT * FROM `st_supplier` ORDER BY sup_id LIMIT 0,10   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\edf66f7760a8fa04669b73f6a0a18b675d9342e6.file.showsup.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\edf66f7760a8fa04669b73f6a0a18b675d9342e6.file.showsup.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001433s ]
+
+[ 2017-02-17T14:46:51+08:00 ] ::1 /medpss/index.php/Admin/Supplier/managesup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0049s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 25 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_supplier` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 27 行.
+SQL: SELECT * FROM `st_supplier` ORDER BY sup_id LIMIT 0,10   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\cd20e6bd49f5221d44f8dcefffd7fb6d58ccf5db.file.managesup.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\cd20e6bd49f5221d44f8dcefffd7fb6d58ccf5db.file.managesup.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000809s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2017-02-17T14:46:51+08:00 ] ::1 /medpss/index.php/Admin/Supplier/addsup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0036s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 49 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 49 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 56 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 56 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 63 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 63 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 70 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 70 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 77 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 77 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 84 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 84 行.
+NOTIC: [8] Undefined index: errorInfo D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 91 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\670f87f4585ce00cf006655cbe922a2833ac95b1.file.addsup.html.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055168s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2017-02-17T14:46:54+08:00 ] ::1 /medpss/index.php/Admin/System/manageuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `st_manager` WHERE ( mg_id not in('1') )  [ RunTime:0.0190s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\aaf46af8d940f897d2f3136fb78a5491cbf0b55d.file.manageuser.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\aaf46af8d940f897d2f3136fb78a5491cbf0b55d.file.manageuser.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001499s ]
+
+[ 2017-02-17T14:46:58+08:00 ] ::1 /medpss/index.php/Admin/System/showauth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_auth` [ RunTime:0.0044s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 154 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_auth` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 156 行.
+SQL: SELECT * FROM `st_auth` ORDER BY auth_path LIMIT 0,12   [ RunTime:0.0061s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\93b3f4eddeed43134c65248e2f8a7c009a04f714.file.showauth.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\93b3f4eddeed43134c65248e2f8a7c009a04f714.file.showauth.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073351s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002470s ]
+
+[ 2017-02-17T14:47:01+08:00 ] ::1 /medpss/index.php/Admin/System/showauth/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_auth` [ RunTime:0.0043s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 154 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_auth` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 156 行.
+SQL: SELECT * FROM `st_auth` ORDER BY auth_path LIMIT 48,12   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011455s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2017-02-17T14:47:06+08:00 ] ::1 /medpss/index.php/Admin/System/manageuser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_manager` WHERE ( mg_id not in('1') )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-02-17T14:47:07+08:00 ] ::1 /medpss/index.php/Admin/System/showauth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_auth` [ RunTime:0.0036s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 154 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_auth` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SystemController.class.php 第 156 行.
+SQL: SELECT * FROM `st_auth` ORDER BY auth_path LIMIT 0,12   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2017-02-17T14:47:07+08:00 ] ::1 /medpss/index.php/Admin/System/manageauth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `st_role` WHERE ( role_id not in('0') )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\198ed8c5a33ce6eb4f580153e2648fb925892e3a.file.manageauth.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\198ed8c5a33ce6eb4f580153e2648fb925892e3a.file.manageauth.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2017-02-17T14:47:08+08:00 ] ::1 /medpss/index.php/Admin/System/backup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0192s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0199s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\c98a03fc5881c112271d0241717f4c4fe953af18.file.backup.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\c98a03fc5881c112271d0241717f4c4fe953af18.file.backup.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002060s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001661s ]
+
+[ 2017-02-17T14:47:13+08:00 ] ::1 /medpss/index.php/Admin/System/backuptest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_test` [ RunTime:0.0039s ]
+ERR: 1:Can't create/write to file '\Library\WebServer\Documents\medpss\Backup\test' (Errcode: 2 "No such file or directory")
+ [ SQL语句 ] : select * from st_test where test_id!='' into outfile '/Library/WebServer/Documents/medpss/Backup/test'
+                    fields terminated by '|' enclosed by ':' lines terminated by '
+'
+ERR: 1:Can't create/write to file '\Library\WebServer\Documents\medpss\Backup\test' (Errcode: 2 "No such file or directory")
+ [ SQL语句 ] : select * from st_test where test_id!='' into outfile '/Library/WebServer/Documents/medpss/Backup/test'
+                    fields terminated by '|' enclosed by ':' lines terminated by '
+'
+
+[ 2017-02-17T14:47:31+08:00 ] ::1 /medpss/index.php/Admin/Trade/choosesup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0072s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_supplier` LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 23 行.
+SQL: SELECT * FROM `st_supplier` ORDER BY sup_id LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\ae4b2354662908dad4d33be7abf0911fc0228202.file.choosesup.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\ae4b2354662908dad4d33be7abf0911fc0228202.file.choosesup.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084511s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084598s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001516s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001583s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001992s ]
+
+[ 2017-02-17T14:47:33+08:00 ] ::1 /medpss/index.php/Admin/Trade/purmed/sup_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.2239s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0237s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0242s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `st_supplier` WHERE `sup_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `st_med` WHERE ( med_supplier like '供应商A' )  [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\5a26c6341235ef06cfb028c2525697902a80ab4c.file.purmed.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\5a26c6341235ef06cfb028c2525697902a80ab4c.file.purmed.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: page D:\php\xampp\htdocs\medpss\Runtime\Cache\5a26c6341235ef06cfb028c2525697902a80ab4c.file.purmed.html.php 第 181 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\5a26c6341235ef06cfb028c2525697902a80ab4c.file.purmed.html.php 第 181 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001703s ]
+
+[ 2017-02-17T14:47:39+08:00 ] ::1 /medpss/index.php/Admin/Trade/purchase
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `st_supplier` WHERE `sup_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: id_all D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 60 行.
+SQL: select * from st_med where med_id in(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30) [ RunTime:0.0010s ]
+NOTIC: [8] Use of undefined constant CG - assumed 'CG' D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 64 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\7c801d5aeaaeaffaaf661995a30fbe0619cfcc67.file.purchase.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\7c801d5aeaaeaffaaf661995a30fbe0619cfcc67.file.purchase.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000654s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001008s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2017-02-17T14:47:50+08:00 ] ::1 /medpss/index.php/Admin/Trade/savepur
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_purchase` [ RunTime:0.0041s ]
+NOTIC: [8] Undefined variable: medsubtotal D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 92 行.
+NOTIC: [8] Undefined variable: medpurchasetotal D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 94 行.
+SQL: insert st_purchase set orderpo='CG2017021798565657',orderdate='2017-02-17 14:47:39',sup_name='供应商A',user_name='药品进销存管理系统',sup_principal='周鹏',user='admin',sup_phone='15814915786',user_phone='18819438230',sup_email='440121378@qq.com',user_email='542783146@qq.com',sup_address='华软东门',user_address='华软',med_id='1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30',med_name='葡萄糖酸钙口服溶液,注射用头孢曲松钠,羟乙基淀粉20氯化钠注射液,氯化钠注射液,氯化钠注射液,注射用头孢曲松钠,注射用对氨基水杨酸钠,乳酸钠林格注射液,格列齐特片(Ⅱ),依诺沙星软膏,氢溴酸右美沙芬口服液,注射用头孢哌酮钠舒巴坦钠,注射用头孢噻肟钠,甘露醇注射液,注射用硫酸阿米卡星,替硝唑片,肝素钙,复方氨基酸注射液(3AA),盐酸伪麻黄碱,注射用阿昔洛韦,吉非罗齐胶囊,法莫替丁片,乳酸环丙沙星注射液,口服固体药用低密度聚乙烯瓶,玻璃酸钠,流行性感冒裂解疫苗,中性胰岛素注射液,注射用哌拉西林钠,头孢拉定,头孢拉定',med_inprice='22,11,26,14,27,10,9,6,20,10,19,26,28,28,16,26,20,18,22,21,25,12,21,20,22,5,16,22,8,17',count='2,6,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1',subtotal='44,66,26,14,27,10,9,6,20,10,19,26,28,28,16,26,20,18,22,21,25,12,21,20,22,5,16,22,8,17',remark=',,,,,,,,,,,,,,,,,,,,,,,,,,,,,' ,purchase_total='624'  [ RunTime:0.0492s ]
+NOTIC: [8] Use of undefined constant 订单提交成功 - assumed '订单提交成功' D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 100 行.
+
+[ 2017-02-17T14:47:52+08:00 ] ::1 /medpss/index.php/Admin/Trade/showpur.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_purchase` [ RunTime:0.0045s ]
+SQL: select *,case when status = 1 then '已入库'
+                                           when status = 0 then '待入库...'
+                                           end as status
+                                           from st_purchase
+                                           order by orderdate [ RunTime:0.0008s ]
+NOTIC: [8] Undefined variable: info D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: page D:\php\xampp\htdocs\medpss\Runtime\Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php 第 91 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067363s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001977s ]
+
+[ 2017-02-17T14:48:02+08:00 ] ::1 /medpss/index.php/Admin/Trade/purorder/orderpo/CG2017021798565657
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0397s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_purchase` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `st_purchase` WHERE `orderpo` = 'CG2017021798565657' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\08528f99def029e554b99f3483eadf70ad53357b.file.purorder.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\08528f99def029e554b99f3483eadf70ad53357b.file.purorder.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001138s ]
+
+[ 2017-02-17T14:54:41+08:00 ] ::1 /medpss/index.php/Admin/Admin/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2017-02-17T14:54:41+08:00 ] ::1 /medpss/index.php/Admin/Admin/head.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001267s ]
+
+[ 2017-02-17T14:54:41+08:00 ] ::1 /medpss/index.php/Admin/Admin/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\php\xampp\htdocs\medpss\Admin\Controller\AdminController.class.php 第 31 行.
+ERR: 1146:Table 'medpss.st_auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_auth`
+ERR: 1146:Table 'medpss.st_auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_auth`
+
+[ 2017-02-17T14:54:41+08:00 ] ::1 /medpss/index.php/Admin/Admin/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001203s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020850s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2017-02-17T14:54:50+08:00 ] ::1 /medpss/index.php/Admin/Admin/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000699s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-02-17T14:54:50+08:00 ] ::1 /medpss/index.php/Admin/Admin/head.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2017-02-17T14:54:50+08:00 ] ::1 /medpss/index.php/Admin/Admin/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\php\xampp\htdocs\medpss\Admin\Controller\AdminController.class.php 第 31 行.
+ERR: 1146:Table 'medpss.st_auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_auth`
+ERR: 1146:Table 'medpss.st_auth' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `st_auth`
+
+[ 2017-02-17T14:54:50+08:00 ] ::1 /medpss/index.php/Admin/Admin/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2017-02-17T14:57:02+08:00 ] ::1 /medpss/index.php/Admin/Admin/admin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0328s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2017-02-17T14:57:02+08:00 ] ::1 /medpss/index.php/Admin/Admin/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\php\xampp\htdocs\medpss\Admin\Controller\AdminController.class.php 第 31 行.
+SQL: SHOW COLUMNS FROM `st_auth` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `st_auth` WHERE ( auth_level=0 and auth_id in(100,109,102,115,103,107,118,120,104,123,124,131,133,136,137,141,142) )  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `st_auth` WHERE ( auth_level=1 and auth_id in(100,109,102,115,103,107,118,120,104,123,124,131,133,136,137,141,142) )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012317s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001043s ]
+
+[ 2017-02-17T14:57:02+08:00 ] ::1 /medpss/index.php/Admin/Admin/head.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+
+[ 2017-02-17T14:57:02+08:00 ] ::1 /medpss/index.php/Admin/Admin/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2017-02-17T14:57:07+08:00 ] ::1 /medpss/index.php/Admin/Supplier/showsup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0039s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 15 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_supplier` LIMIT 1   [ RunTime:0.0195s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\SupplierController.class.php 第 17 行.
+SQL: SELECT * FROM `st_supplier` ORDER BY sup_id LIMIT 0,10   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2017-02-17T14:57:10+08:00 ] ::1 /medpss/index.php/Admin/Med/showlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0052s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 20 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_med` LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 22 行.
+SQL: SELECT * FROM `st_med` ORDER BY med_id LIMIT 0,15   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\6d904ce3d98b8a37c86332f6f2cdf2b50ba4c243.file.showlist.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\6d904ce3d98b8a37c86332f6f2cdf2b50ba4c243.file.showlist.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001412s ]
+
+[ 2017-02-17T14:57:13+08:00 ] ::1 /medpss/index.php/Admin/Med/showlist/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0044s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 20 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_med` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 22 行.
+SQL: SELECT * FROM `st_med` ORDER BY med_id LIMIT 15,15   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000841s ]
+
+[ 2017-02-17T14:57:14+08:00 ] ::1 /medpss/index.php/Admin/Med/showlist/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0037s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 20 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_med` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\MedController.class.php 第 22 行.
+SQL: SELECT * FROM `st_med` ORDER BY med_id LIMIT 30,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001263s ]
+
+[ 2017-02-17T14:57:18+08:00 ] ::1 /medpss/index.php/Admin/Inventory/showin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0048s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\InventoryController.class.php 第 10 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_med` LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\InventoryController.class.php 第 12 行.
+SQL: SELECT * FROM `st_med` ORDER BY med_id LIMIT 0,15   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\eb124275444798784704b328d8d97c90cf17515a.file.showin.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\eb124275444798784704b328d8d97c90cf17515a.file.showin.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001996s ]
+
+[ 2017-02-17T14:57:21+08:00 ] ::1 /medpss/index.php/Admin/Inventory/warning
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_med` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `st_med` WHERE ( med_inventory<100 ) ORDER BY med_inventory  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\c65ceb1e7fce074d2691bc567a07f1f30fa4f828.file.warning.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\c65ceb1e7fce074d2691bc567a07f1f30fa4f828.file.warning.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: page D:\php\xampp\htdocs\medpss\Runtime\Cache\c65ceb1e7fce074d2691bc567a07f1f30fa4f828.file.warning.html.php 第 86 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\c65ceb1e7fce074d2691bc567a07f1f30fa4f828.file.warning.html.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060683s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2017-02-17T14:57:23+08:00 ] ::1 /medpss/index.php/Admin/Trade/choosesup
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0571s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `st_supplier` [ RunTime:0.0165s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `st_supplier` LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [8] Undefined variable: where D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 23 行.
+SQL: SELECT * FROM `st_supplier` ORDER BY sup_id LIMIT 0,10   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023183s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001556s ]
+
+[ 2017-02-17T14:57:24+08:00 ] ::1 /medpss/index.php/Admin/Trade/showpur
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_purchase` [ RunTime:0.0044s ]
+SQL: select *,case when status = 1 then '已入库'
+                                           when status = 0 then '待入库...'
+                                           end as status
+                                           from st_purchase
+                                           order by orderdate [ RunTime:0.0274s ]
+NOTIC: [8] Undefined variable: info D:\php\xampp\htdocs\medpss\Admin\Controller\TradeController.class.php 第 116 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: page D:\php\xampp\htdocs\medpss\Runtime\Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php 第 91 行.
+NOTIC: [8] Trying to get property of non-object D:\php\xampp\htdocs\medpss\Runtime\Cache\439a898d41e494ce61a3057ac60121b7c944d65d.file.showpur.html.php 第 91 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010327s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2017-02-17T14:57:27+08:00 ] ::1 /medpss/index.php/Admin/About/about
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `st_manager` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `st_manager` WHERE `mg_id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `st_role` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `st_role` WHERE `role_id` = 10 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for D:/php/xampp/htdocs/medpss/Runtime/Cache\6e29ce729337e131e6cf79e94c9ca4dc1b50e019.file.about.html.php D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(D:/php/xampp/htdocs/medpss/Runtime/Cache\6e29ce729337e131e6cf79e94c9ca4dc1b50e019.file.about.html.php): No such file or directory D:\php\xampp\htdocs\ThinkPHP\Library\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+

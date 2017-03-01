@@ -172,7 +172,7 @@ class TradeController extends MedpssController{
         //$p = getpage($count,15);
         //$info = $med->where($where)->order('med_id')->limit($p->firstRow, $p->listRows)->select();
         
-        $info = $med->select();
+        $info = $med->where("med_inventory>0")->select();
         $this->assign('info', $info); // 赋值数据集
         //$this->assign('page', $p->show()); // 赋值分页输出
         $this->assign('infoA',$infoA);
